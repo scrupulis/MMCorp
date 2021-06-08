@@ -172,7 +172,7 @@ echo '<div class="col">新着情報はありません</div></div>';
                   </div>
                   <div class="text-wrapper">
                     <h2>YouTubeチャンネルプロデュース事業</h2>
-                    <p>チャンネルの企画・初期運用・動画制作・集客チャネル化まで、お客様の様々な目的に則した形で提供させていただきます。※御相談を多くいただいておりますので、ご興味ある方はまずお問合せください。</p>
+                    <p>チャンネルの企画・初期運用・動画制作・集客チャネル化まで、お客様の様々な目的に則した形で提供させていただきます。※御相談を多くいただいておりますので、ご興味ある方はまずお問合せください。</p><a href="https://mmark.co.jp/produce/" target="_blank" rel="noopener noreferrer" class="link-button">詳細はこちら</a>
                   </div>
                 </div>
               </section>
