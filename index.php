@@ -452,7 +452,7 @@ echo '<div class="col">新着情報はありません</div></div>';
         </nav>
         <div class="info">
           <div class="copy-right">
-            <p class="footer-text">&copy; 2020 <a href="./">株式会社エム・マーケティング </a></p>
+            <p class="footer-text">&copy; <?php echo Date('Y'); ?><a href="./">株式会社エム・マーケティング </a></p>
           </div>
           <div class="legal-link"><a href="./sublayers/privacypolicy" class="footer-text">プライバシーポリシー</a><a href="./sublayers/tokusho" class="footer-text">特定商法取引法に基づく表示</a></div>
         </div>
