@@ -1,0 +1,223 @@
+
+
+//- 階層設定
+- var depth = '../../';
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="社会人向け教育事業｜株式会社エム・マーケティング　公式ホームページ")
+
+        // CSSリンク
+        
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        //- link(href="#{depth}include/css/topfv.css" rel="stylesheet")
+        //- link(href="#{depth}include/css/topmain.css" rel="stylesheet")
+        link(href="#{depth}include/css/linkbutton.css" rel="stylesheet")
+        link(href="#{depth}include/css/contact.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")        
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/publicstyle.css" rel="stylesheet")
+        link(href="#{depth}sublayers/subinclude/css/sublayers.css" rel="stylesheet")
+        link(href="css/style.css" rel="stylesheet")
+        
+        // ファビコン設定
+        link(href="https://mmark2.biz/media/publicresources/images/mmark_logo.svg" rel="icon" type="image/svg+xml")
+
+        title 社会人向け教育事業｜株式会社エム・マーケティング　公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+
+        include ../../include/jade/fadein.jade
+    
+    body
+
+        //- ヘッダ
+        include ../../include/jade/header.jade
+
+        main
+            - var section_name = "MMBA"
+            - var section_title = "社会人向け教育事業"
+            include ../subinclude/jade/sublyaertemplates.jade
+
+            section#csr-main-section.sublayer-unique-section 
+                h2 「教えたい人」と
+                    br
+                    |「学びたい人」をつなげる
+                    br
+                    |MMビジネスアカデミー
+                div.fadein.text
+                    p MMビジネスアカデミー（MMBA）では”教えたい人”を講師としてプロデュースして講座の企画から集客、販売までトータルにサポートします。
+                        |講師の方と一緒にお作りした講座は、最新のデジタルマーケティングによって”学びたい人”達に届けられます。
+                        |”学びたい人”達は説明会に参加したり無料の動画を見てから講座を購入出来るので、安心して受講する事ができます。
+                        |最新のデジタルマーケティング技術と講座を通して”教えたい人”と”学びたい人”を繋ぐ場所それがMMBAです。
+                div.fadein
+                    figure
+                        img.mmbifig-on-pc(src="images/mmba.png" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;")
+                        img.mmbifig-on-sp(src="images/mmbasp.png" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;")
+                article.features
+                            article.strength
+                                .inner
+                                    h2.fadein MMBAの強み
+                                    div.fadein
+                                        div
+                                            ul 
+                                                li Point1.　マーケティング／集客力
+                                                li Point2.　講座運営力
+                                                li Point3.　講師プロデュース力
+                            article.benefit_teachers.fadein
+                                .inner
+                                    h2 講師のメリット
+                                    div 
+                                        div
+                                            div.benefit_card
+                                                div
+                                                    div
+                                                        p 1
+                                                div
+                                                    p 金銭的なリスクがない
+                                            div.benefit_card
+                                                div
+                                                    div
+                                                        p 2
+                                                div
+                                                    p 集客、運営にリソースを割かなくて良い
+
+                                        div
+                                            div.benefit_card
+                                                div
+                                                    div
+                                                        p 3
+                                                div
+                                                    p 講師自身も気付かなかったような新しい打ち出し方を発見出来る
+                                            div.benefit_card
+                                                div
+                                                    div
+                                                        p 4
+                                                div
+                                                    p 業界水準以上の講師料を保証してもらえる
+                            article.benefit_students.fadein
+                                .inner
+                                    h2 受講生のメリット
+                                    div 
+                                        div
+                                            div.benefit_card
+                                                div
+                                                    div
+                                                        p 1
+                                                div
+                                                    p MMBAの厳しい審査を突破した、クオリティの高い講座を受講できる
+                                            div.benefit_card
+                                                div
+                                                    div
+                                                        p 2
+                                                div
+                                                    p 無料動画、説明会を経て納得の上で受講できる
+                                        div
+                                            div.benefit_card
+                                                div
+                                                    div
+                                                        p 3
+                                                div
+                                                    p 経営、集客、技術などビジネスにクリティカルなスキルを学べる
+                                            div.benefit_card
+                                                div
+                                                    div
+                                                        p 4
+                                                div
+                                                    p 安心のアフターフォロー（講座・講師による）
+
+                                    .button-wrapper(style="padding-top:1em; text-align:center;")
+                                        a.link-button(href="detail" target="_blank" rel="noopener noreferrer") 講座の詳細はこちら
+
+                                
+                        article.industries
+                            .inner
+                                article 
+                                    h2.fadein 開催業種
+                                    div.fadein
+                                        table.mmba-only-on-pc
+                                            tbody
+                                                tr
+                                                    td 経営
+                                                    td 出版
+                                                    td 店舗型ビジネス
+                                                    td 能力開発
+                                                    td Webマーケティング
+                                                tr
+                                                    td 組織マネジメント
+                                                    td 研修
+                                                    td 不動産
+                                                    td 整体・整骨院
+                                                    td パーソナルトレーナー
+                                                tr 
+                                                    td 医療・福祉
+                                                    td コンサルティング
+                                                    td 禅研修
+                                                    td M&amp;Aアドバイザー
+                                                    td 金融・株
+                                                tr
+                                                    td コーチング
+                                                    td 教育
+                                                    td 通信販売
+                                                    td 
+                                                    td etc
+                                        table.mmba-only-on-sp
+                                            tbody
+                                                tr
+                                                    td 経営
+                                                    td 不動産
+                                                tr 
+                                                    td 組織マネジメント
+                                                    td 禅研修
+                                                tr
+                                                    td 医療・福祉
+                                                    td 教育
+                                                tr  
+                                                    td 金融・株
+                                                    td 能力開発
+                                                tr  
+                                                    td 出版
+                                                    td 整体・整骨院
+                                                tr  
+                                                    td 研修
+                                                    td M&amp;A
+                                                tr  
+                                                    td コンサルティング
+                                                    td 通信販売
+                                                tr 
+                                                    td コーチング
+                                                    td Webマーケティング
+                                                tr
+                                                    td 店舗型ビジネス
+                                                    td パーソナルトレーナー
+                                                tr
+                                                    td 
+                                                    td etc
+                                            
+                                article
+                                    h2.fadein 累計開催業種
+                                        br
+                                        span 53
+                                        |業種以上
+                                        div
+                                            figure  
+                                                img(src='images/varrow.png' oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" )
+                                    div#results
+                                        .inner
+                                            figure.fadein
+                                                img.mmba-only-on-sp(src="images/results.svg" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;")
+                                                img.mmba-only-on-pc(src="images/resultspc.svg" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;")
+
+                section.contact
+                    h1 お問い合わせ
+                    include ../../include/jade/contact.html
+                    include ../../include/API/APICALLER_MMBA.html
+
+        //- フッター
+        include ../../include/jade/footer.jade
+
+        //- SATORIの計測タグを設置
+        include ../../include/js/satori.js

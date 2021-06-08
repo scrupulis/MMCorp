@@ -1,0 +1,27 @@
+//- トップページのファーストビュー
+
+section#top-first-view
+    .inner
+        .background
+            .background-screen
+                .animation-panel
+                    .animation-cavas
+                        .animation-cavas-inner
+                            .logo
+                                .wrapper
+                                    img(src="#{depth}images/navylogo_ci.png")
+                            .title
+                                h1 「知」と「希望」に
+                                    br.sp
+                                    |あふれた社会を創る。
+                            .line
+                            .sub-title  
+                                h2 SMB特化型の
+                                    br.sp
+                                    |サクセスプラットフォームを提供しています。
+                //- 新着情報
+                .info-panel
+                    .inner
+                        .news-list
+                            include ../php/singlenewsloader.php
+                

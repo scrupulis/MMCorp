@@ -1,0 +1,54 @@
+//- 新型コロナに関するお知らせのページ
+
+
+//- 階層設定
+- var depth = '../../';
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="株式会社エム・マーケティング　公式ホームページ")
+
+        // CSSリンク
+        
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        link(href="#{depth}include/css/linkbutton.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")        
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/publicstyle.css" rel="stylesheet")
+        link(href="#{depth}sublayers/subinclude/css/sublayers.css" rel="stylesheet")
+        link(href="css/style.css" rel="stylesheet")
+        
+        // ファビコン設定
+        link(href="https://mmark.co.jp/media/publicresources/images/mmark_logo.svg" rel="icon" type="image/svg+xml")
+
+        title 代表原田がピッチイベント「START CAMP」に登壇しました。｜株式会社エム・マーケティング　公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+    
+    body
+
+        //- ヘッダ
+        include ../../include/jade/header.jade
+
+        main
+            - var section_name = "20201210pitch"
+            - var section_title = "代表の原田がピッチイベントに登壇しました。"
+            include ../subinclude/jade/sublyaertemplates.jade
+
+
+            section#csr-main-section.sublayer-unique-section 
+                //- h2 代表の原田がピッチイベント「START CAMP」に登壇しました。
+                p 弊社代表の原田が、CarpeDiem株式会社の主催するオンラインピッチイベント「START CAMP」に登壇しました。
+                p START CAMPは大企業とスタートアップとの資本・業務提携をテーマにしたピッチイベントで、
+                    br
+                | 大手企業の執行役員や事業責任者、年商1億円以上のスタートアップ企業の経営層らに対してピッチしました。
+                p START CAMP
+                a(href="https://www.carpe-diem.dev/" target="_blank") https://www.carpe-diem.dev/
+        //- フッター 
+        include ../../include/jade/footer.jade
+        //- SATORI計測タグ
+        include ../../include/js/satori.js
+

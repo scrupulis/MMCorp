@@ -1,0 +1,11 @@
+
+//- このファイルでは下層ページのトップヒーローのみを定義しています。
+//- セクション名は変数で受け取ります。
+
+section(id="#{section_name}").sublayer-top-section
+    .inner#contents-root
+        .first-view
+            .background#sublayer-background
+                img(src="images/sp-fv-front.svg").only-on-datis#datis-fv-front
+                h1.on-datis-hide #{section_title}
+                

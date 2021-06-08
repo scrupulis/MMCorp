@@ -1,0 +1,114 @@
+#sublayer-background {
+  background-image: url("../images/csrfv.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #sublayer-background h1 {
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.76); }
+
+@media screen and (max-width: 700px) {
+  #MMRecruit h1 {
+    font-size: 30px; }
+  #MMRecruit h2 {
+    font-size: 24px; }
+  #MMRecruit h3 {
+    font-size: 20px; }
+  #MMRecruit p {
+    padding: 0; } }
+#MMRecruit .hr {
+  padding: 1em 0; }
+  #MMRecruit .hr img {
+    width: 100%; }
+#MMRecruit #topsection .section-hero {
+  display: flex;
+  flex-direction: row; }
+  #MMRecruit #topsection .section-hero .left-pane {
+    width: 60%; }
+    #MMRecruit #topsection .section-hero .left-pane figure img {
+      width: 100%; }
+  #MMRecruit #topsection .section-hero .right-pane {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%; }
+    #MMRecruit #topsection .section-hero .right-pane .image-wrapper figure img {
+      width: 100%; }
+    #MMRecruit #topsection .section-hero .right-pane .text-wrapper h2 {
+      font-size: 18px;
+      font-weight: bold; }
+    #MMRecruit #topsection .section-hero .right-pane .text-wrapper h2, #MMRecruit #topsection .section-hero .right-pane .text-wrapper p {
+      text-align: center; }
+#MMRecruit #topsection .subsection h3 {
+  margin: 1em 0;
+  border-top: 1px solid #323232;
+  border-bottom: 1px solid #323232; }
+#MMRecruit .lower-section > .inner {
+  padding: 1em 0; }
+  #MMRecruit .lower-section > .inner .heading h2 {
+    width: 100%; }
+    #MMRecruit .lower-section > .inner .heading h2 figure img {
+      width: 100%; }
+  #MMRecruit .lower-section > .inner .subsection {
+    padding: 1em 0; }
+  #MMRecruit .lower-section > .inner .empyee-comment {
+    display: flex;
+    flex-direction: row; }
+    #MMRecruit .lower-section > .inner .empyee-comment .left-pane {
+      width: 40%; }
+      #MMRecruit .lower-section > .inner .empyee-comment .left-pane img {
+        width: 100%; }
+    #MMRecruit .lower-section > .inner .empyee-comment .right-pane {
+      width: 60%; }
+  #MMRecruit .lower-section > .inner .employee-profile .employee-info h3 {
+    display: flex;
+    align-items: center; }
+    #MMRecruit .lower-section > .inner .employee-profile .employee-info h3::after {
+      content: "";
+      height: 1px;
+      flex-grow: 1;
+      background-color: #323232;
+      display: block;
+      margin-left: 1em; }
+  #MMRecruit .lower-section > .inner .employee-profile .employee-info .info-body {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #323232; }
+    #MMRecruit .lower-section > .inner .employee-profile .employee-info .info-body .row {
+      display: flex;
+      flex-direction: row; }
+      #MMRecruit .lower-section > .inner .employee-profile .employee-info .info-body .row .cell {
+        display: flex;
+        flex-direction: row; }
+        #MMRecruit .lower-section > .inner .employee-profile .employee-info .info-body .row .cell:first-child {
+          padding-right: 1em; }
+  #MMRecruit .lower-section > .inner .employee-profile .employee-info .day {
+    padding-top: 1em; }
+    #MMRecruit .lower-section > .inner .employee-profile .employee-info .day .swiper-container .swiper-wrapper .swiper-slide .inner {
+      display: flex;
+      flex-direction: column; }
+      #MMRecruit .lower-section > .inner .employee-profile .employee-info .day .swiper-container .swiper-wrapper .swiper-slide .inner .image-wrapper {
+        width: 100%; }
+        #MMRecruit .lower-section > .inner .employee-profile .employee-info .day .swiper-container .swiper-wrapper .swiper-slide .inner .image-wrapper img {
+          width: 100%; }
+
+.swiper-container {
+  padding-bottom: 1.5em; }
+
+.swiper-button-next {
+  background-image: url("../images/arrow_right.svg") !important; }
+
+.swiper-button-prev {
+  background-image: url("../images/arrow_left.svg") !important; }
+
+.swiper-pagination-bullet-active {
+  background-color: #323232 !important; }
+
+.swiper-button-next, .swiper-button-prev {
+  filter: drop-shadow(0 0 2px #323232);
+  -webkit-filter: drop-shadow(0 0 2px #323232);
+  -moz-filter: drop-shadow(0 0 2px #323232); }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,31 @@
+#sublayer-background {
+  background-image: url("../images/csrfv.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #sublayer-background h1 {
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.76); }
+
+.images figure {
+  display: flex;
+  align-items: flex-start; }
+  @media screen and (max-width: 670px) {
+    .images figure {
+      flex-direction: column; } }
+  .images figure img {
+    width: 50%;
+    height: auto; }
+    @media screen and (max-width: 670px) {
+      .images figure img {
+        width: 100%; } }
+
+.links {
+  padding: 1em; }
+
+.chiyoda {
+  max-width: 273px; }
+
+/*# sourceMappingURL=style.css.map */

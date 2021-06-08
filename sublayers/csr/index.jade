@@ -1,0 +1,71 @@
+//- CSRページ
+
+
+//- 階層設定
+- var depth = '../../';
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="株式会社エム・マーケティング　公式ホームページ")
+
+        // CSSリンク
+        
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        link(href="#{depth}include/css/linkbutton.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")        
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/publicstyle.css" rel="stylesheet")
+        link(href="#{depth}sublayers/subinclude/css/sublayers.css" rel="stylesheet")
+        link(href="css/style.css" rel="stylesheet")
+        
+        // ファビコン設定
+        link(href="https://mmark.co.jp/media/publicresources/images/mmark_logo.svg" rel="icon" type="image/svg+xml")
+
+        title CSR情報｜株式会社エム・マーケティング　公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+    
+    body
+
+        //- ヘッダ
+        include ../../include/jade/header.jade
+
+        main
+            - var section_name = "CSR"
+            - var section_title = "CSR情報"
+            include ../subinclude/jade/sublyaertemplates.jade
+
+            section#csr-main-section.sublayer-unique-section 
+                h2 熊本県商工観光労働部産業支援課と企業上場に向けた取り組み
+                p 熊本県では、2016年度から熊本県内の企業上場に向けた取り組みを支援しています。
+                    br
+                    |弊社代表原田が、生まれ故郷である熊本県への地域振興支援の一環として一般社団法人 熊本創生企業家ネットワークの理事を務めさせていただております。
+                    br
+                    |本年度、千代田区からビジネス大賞の優秀賞を受賞した経験も踏まえ、企業経営ノウハウ伝達の役割を担っております。
+                    br
+                    br
+
+                .images
+                    figure
+                        img(src="images/kumamoto1.jpg" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" )
+                        img(src="images/kumamoto2.jpg" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" )
+
+                .links
+                    h3 参考リンク
+                    div
+                        a(href="https://www.mm-chiyoda.or.jp/business/biz-prize12th.html").chiyoda-wrapper
+                            img(src="images/ChiyodaBussinessAward.svg").chiyoda
+                    hr
+                    dvi
+                        a(href="https://kumamoto-cen.or.jp/")
+                            i.fas.fa-external-link-square-alt
+                            |熊本創生企業家ネットワーク ホームページ
+
+        //- フッター
+        include ../../include/jade/footer.jade
+
+        //- SATORI計測タグ
+        include ../../include/js/satori.js

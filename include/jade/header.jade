@@ -1,0 +1,29 @@
+
+
+header
+    .inner
+        .header-logo
+            a(href="#{depth}")
+                figure
+                    img(src="#{depth}include/images/mmark_logo_white.svg" oncontextmenu="return false;"  onmousedown="return false;")
+
+        //- PC版ナビ
+        nav.pc
+            include naviitems.jade
+            
+        //- スマホ版ナビ
+        nav.sp  
+            .hamberger-wrapper
+                .inner
+                    a#hamberger-toggle-switch
+                        //- エキスパンダー開閉JS
+                        script(src="#{depth}include/js/jquery3.4.1.min.js")
+                        script(src="#{depth}include/js/hambergertoggler.js")
+                        //- ハンバーガーメニューの各棒
+                        span.hambergar-bar
+                        span.hambergar-bar
+                        span.hambergar-bar
+    //- スマホ版メニューの本体
+    #sp-nav-body
+        include naviitems.jade
+                    

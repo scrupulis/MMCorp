@@ -1,0 +1,24 @@
+
+@import "../../../include/css/variables.scss";
+@import "../../../include/css/mixin.scss";
+
+// ファーストビューの背景設定
+#sublayer-background{
+
+    @include flex_template_1(center,center);
+}
+table{
+    
+    display: block;
+    border-collapse: collapse;
+    tr,td,th{
+        display: block;
+        text-align: left;
+    }
+    td{
+        padding-left: 1em !important;
+    }
+    tr{
+        padding:1.5em 0;
+    }
+}

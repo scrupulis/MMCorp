@@ -1,0 +1,23 @@
+@media screen and (max-width: 700px) {
+  .sublayer-top-section {
+    padding-top: 63px; } }
+.sublayer-top-section #contents-root .first-view .background {
+  height: 40vh;
+  background-size: cover;
+  background-position: center; }
+  .sublayer-top-section #contents-root .first-view .background h1 {
+    padding: 0 .3em; }
+
+.only-on-datis {
+  display: none; }
+
+.sublayer-unique-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1em; }
+  .sublayer-unique-section h1, .sublayer-unique-section h2 {
+    text-align: center; }
+  .sublayer-unique-section p {
+    padding-top: 1em; }
+
+/*# sourceMappingURL=sublayers.css.map */

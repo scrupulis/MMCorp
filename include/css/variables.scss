@@ -1,0 +1,168 @@
+
+
+// 色
+$color_main:#2d4486;            // メインカラー
+$color_accent:#e5783f;          // アクセントカラー
+$color_conversion:#d9c146;      //　コンバージョンカラー
+$color_front:#323232;           //　文字色
+$color_invisible:#00000000;
+$color_default_gray:#e6e6e5;    
+// レイアウト
+$max_width_content:1000px;          // コンテンツの最大幅
+
+//　文字
+$font_size_default:16px;            //　デフォルトの文字サイズ
+$font_size_default_h1:38px;         // h1デフォルトの文字サイズ
+$font_size_subsection_h1:28px;
+
+// 画像関連のグローバルな値
+$border_radius_images:10px;
+
+
+// デバイスの幅
+// iPhone
+$width_4_inch_iPhone:320px;
+$width_4_7inch_iPhone:375px;
+
+
+// 以下　個別の値設定　///////////////////////////////////////////////////
+
+// ヘッダ関連　///////////////////////////////////////////////////
+
+// ヘッダのz-index
+$z_index_header:999;
+
+// ヘッダのパディング
+$padding_header_horizontal:1em;
+$padding_header_vertical:1em;
+
+// ヘッダ内の文字サイズ
+$font_size_header_pc:14px;
+
+// SP版ヘッダの高さ
+$height_sp_header:63px;
+
+// ヘッダ内ロゴのサイズ
+$width_header_logo:40px;
+$height_header_logo:31px;
+
+// ハンバーガーメニューを表示する幅
+$width_show_hamberger:700px;
+
+// ハンバーガーメニューの大きさ
+$width_hamburger:20px;                  //　ハンバーガーメニューの幅
+$height_hamburger:$width_hamburger;     // ハンバーガーメニューの高さ
+$height_bar:2px;                        // ハンバーガーメニューの各棒の高さ
+$distance_bars: ($width_hamburger/3) - ($height_bar/2);      // ハンバーガーメニューの各棒どうしの距離
+$rotate_deg_bar:45deg;
+
+// ファーストビュー関連　///////////////////////////////////////////////////
+//- ファーストビュー関連
+$color_background_screen_before:rgba(255,255,255,255);
+$color_background_screen_after:rgba(255,255,255,0);
+
+$width_logo:100px;
+
+//- ファーストビュー関連
+$height_firstview_animation_canvas:70vh;                    // ファーストビューの高さ
+$color_background_screen_before:rgba(255,255,255,255);
+$color_background_screen_after:rgba(255,255,255,0);
+
+// ファーストビュー内新着情報
+$color_info_panel:rgba(0, 0, 0, 0.432);
+
+$width_logo:100px;  // ロゴの幅
+$height_logo:79px;
+
+
+//- ファースビュー内キーフレームアニメーション関連
+$duration_logo_animaton:.2s;                // ロゴの出現アニメーション
+$duration_line_animation: 0.2s;             // タイトルとサブタイトルとを分割する線分の出現アニメーション
+$duration_text_animation: 0.4s;             // タイトル、サブタイトルの出現アニメーション
+$duration_background_screen_animation:.4s;  // 背景の透明化アニメーション
+
+
+//　アニメーションの持続時間
+$duration_logo_animation:.2s;               // ロゴの出現アニメーション
+$duration_line_animation: 0.2s;             // タイトルとサブタイトルとを分割する線分の出現アニメーション
+$duration_text_animation: 0.4s;             // タイトル、サブタイトルの出現アニメーション
+$duration_background_screen_animation:.4s;  // 背景の透明化アニメーション
+
+// アニメーションの開始遅延時間
+$delay_logo_animation:0.5s;
+$delay_line_animation:$delay_logo_animation + $duration_logo_animation + 0.2s;
+$delay_text_animation: $delay_line_animation + $duration_line_animation;
+$delay_background_scree_animation: $delay_text_animation + $duration_text_animation;
+
+// トップページ関連 ///////////////////////////////////////////////////
+
+$padding_toppage:2em;
+$padding_toppage_sp:1em;
+$far_inter_sections:5em;
+
+// 事業紹介セクション ///////////////////////////////////////
+
+$border_radius:10px;            // 画像の角丸
+$width_business_image:500px;    // 事業のイメージ画像の幅
+$height_business_card:400px;    // 事業紹介カードの高さ
+$width_text_wrapper_pc:60%;
+$background_color_text_wrapepr:rgba($color: white, $alpha: 0.8);
+
+// 経営理念
+$max_width_philosphie_images:540px;
+
+// 代表メッセージ
+$width_image_harada_pc:230px;   //代表写真の幅
+$padding_imaga_harada_pc:1em;   //代表写真の周りの余白
+$line_height_message:2em;
+
+// 役員紹介
+$width_max_width_board_members_section:600px;
+$width_mambers_image_pc:145px;
+$width_mambers_image_sp:370px;
+
+//　各テーブルの幅
+$max_width_profile_table:$max_width_content;
+$max_width_access_table: $max_width_content;
+
+// 新着情報
+$padding_row_news:8em;
+$height_news_list:20em;
+
+
+// フッター関連 ///////////////////////////////////////////////////
+$width_footer_contents:350px;
+$padding_footer_inner:1em;
+$font_size_footer:12px; // フッタ内テキストのフォントサイズ
+
+
+// 下層ページ関係
+$height_firstview:40vh;             // ファーストビューの高さ
+$width_sp:$width_show_hamberger;    //　スマートフォンと見なす横幅
+
+
+// MMRecruit関連 ///////////////////////////////////////////////////
+$font_size_h1_recruit:30px;
+$font_size_h2_recruit:24px;
+$font_size_h3_recruit:20px;
+
+$default_padding_recruit:1em;
+
+$width_topsection_hero_leftpane_recruit:60%;
+
+$height_heading_lowersection_recruit:70px;
+
+$width_lowersectiom_emplyeecomment_leftpane_recruit:40%;
+
+
+//  カルーセル内カードの大きさ
+$z_index_carousel_buttons:$z_index_header - 10; // カルーセル操作用ボタンのzindex
+$margin_buttons:1%;
+
+$width_carousel_card_small:288px;
+$height_carousel_card_small:299px;
+
+$width_carousel_card_medium:343px;
+$height_carousel_card_medium:331px;
+
+$scale_carousel_button:30px;    // カルーセル操作用ボタンのサイズ

@@ -1,0 +1,17 @@
+#sublayer-background {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+table {
+  display: block;
+  border-collapse: collapse; }
+  table tr, table td, table th {
+    display: block;
+    text-align: left; }
+  table td {
+    padding-left: 1em !important; }
+  table tr {
+    padding: 1.5em 0; }
+
+/*# sourceMappingURL=style.css.map */

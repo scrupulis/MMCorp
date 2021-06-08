@@ -1,0 +1,40 @@
+
+@import "../../../include/css/variables.scss";
+@import "../../../include/css/mixin.scss";
+
+// ファーストビューの背景設定
+#sublayer-background{
+    background-image: url('../images/csrfv.jpg');
+    background-position: center;
+    background-size:cover;
+
+    @include flex_template_1(center,center);
+    h1{
+        color:white;
+        text-shadow:0px 0px 5px rgba(0,0,0,0.76);
+    }
+}
+
+.images{
+    figure{
+        display: flex;
+        align-items: flex-start;
+        @media screen and (max-width:670px){
+            flex-direction: column;
+        }   
+        img{
+            width: 50%;
+            height: auto;
+            @media screen and (max-width:670px){
+                width: 100%;
+            }   
+        }
+    }
+}
+
+.links{
+    padding:1em;
+}
+.chiyoda{
+    max-width: 273px;
+}

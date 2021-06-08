@@ -1,0 +1,67 @@
+//- 新型コロナに関するお知らせのページ
+
+
+//- 階層設定
+- var depth = '../../';
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="株式会社エム・マーケティング　公式ホームページ")
+
+        // CSSリンク
+        
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        link(href="#{depth}include/css/linkbutton.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")        
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/publicstyle.css" rel="stylesheet")
+        link(href="#{depth}sublayers/subinclude/css/sublayers.css" rel="stylesheet")
+        link(href="css/style.css" rel="stylesheet")
+        
+        // ファビコン設定
+        link(href="https://mmark.co.jp/media/publicresources/images/mmark_logo.svg" rel="icon" type="image/svg+xml")
+
+        title 年末年始の営業時間について｜株式会社エム・マーケティング　公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+    
+    body
+
+        //- ヘッダ
+        include ../../include/jade/header.jade
+
+        main
+            - var section_name = "2020endofyear"
+            - var section_title = "年末年始の営業時間について"
+            include ../subinclude/jade/sublyaertemplates.jade
+
+            style.
+                article{
+                    padding-top:1.75em;
+                }
+                p{
+                    padding-top:0 !important;
+                }
+
+            section#csr-main-section.sublayer-unique-section 
+                p 平素は格別のご高配を賜り厚くお礼申し上げます。
+                p 下記の期間を年末年始休業とさせていただきます。
+                    br
+                    | ご不便をお掛けいたしますが、ご了承のほど何卒よろしくお願いいたします。
+                article
+                    h3 年末年始休暇期間
+                    p 2020/12/26（土）〜 2021/1/3（日）
+                article
+                    h3 2020年最終営業日
+                    p 2020/12/25（金）
+                article
+                    h3 2021年営業開始日
+                    p 2021/1/4（月）
+        //- フッター
+        include ../../include/jade/footer.jade
+        //- SATORI計測タグ
+        include ../../include/js/satori.js
+

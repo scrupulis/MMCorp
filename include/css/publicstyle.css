@@ -1,0 +1,6 @@
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .5s; }
+
+/*# sourceMappingURL=publicstyle.css.map */

@@ -1,0 +1,62 @@
+h1{
+    text-align: center;
+}
+.h1{
+    text-align: left;
+    border-bottom: 1px solid #323232;
+}
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+.section{
+    padding: 2em 0;
+}
+p , .inner-contents dl{
+    padding: 1em 0 ;
+}
+dl dt{
+    vertical-align: top;
+}
+dl dt , dl dd{
+    display: inline-block;
+}
+.only-on-datis{
+    display: none;
+}
+
+.first-view #sublayer-background{
+    background-image: url("../images/fv_key.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 40vh;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+}
+.first-view #sublayer-background h1{
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.76);
+}
+
+.center{
+    text-align: center;
+}
+
+.inner-contents{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.inner-contents dl dd{
+    padding-left: 1em;
+}
+
+.fadein{
+    opacity: 100;
+    transform: none;
+}

@@ -1,0 +1,290 @@
+
+@import "variables.scss";
+@import "mixin.scss";
+
+// グローバルな設定 ///////////////////////////////////////
+
+.section-head{
+    text-align: center;
+    padding-bottom: .5em;
+}
+
+.subtitle{
+    font-size:$font_size_default ;    
+}
+
+
+.content-wrapper{
+    max-width:$max_width_content;
+    margin: auto;
+    padding:0 $padding_toppage;
+    @media screen and (max-width:$width_4_7inch_iPhone) {
+        padding:0 $padding_toppage_sp
+    }
+
+    section{
+        padding-top:$far_inter_sections !important;
+    }
+    
+}
+
+.default-table{
+    @include default-table();
+}
+
+
+
+// セクションごとの設定///////////////////////////////////////////
+
+// 事業案内
+
+#business{
+
+    img{
+        width: 100%;
+        max-width: $width_business_image;
+        border-radius:$border_radius ;
+    }
+
+    .business-card{
+        .text-wrapper{
+            p{
+                padding-bottom: 1em;
+            }
+        }
+    }
+
+    // PCでの表示
+    @media screen and (min-width:$width_show_hamberger+1){
+        
+        .subsection{
+
+            &:nth-child(odd){
+                .text-wrapper{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: $width_text_wrapper_pc;
+                }
+            }
+
+            &:nth-child(even){
+                .text-wrapper{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: $width_text_wrapper_pc;
+                }
+                .image-wrapper{
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+
+        .business-card{
+            position: relative;
+            height: $height_business_card;
+            .text-wrapper{
+                background-color: $background_color_text_wrapepr;
+                border-radius:$border_radius ;
+                padding: 2em;
+            }
+        }
+    }
+
+
+
+}
+
+#company{
+
+    // 経営理念
+    #philosophies{
+        .section-unique-box{
+            figure{
+                max-width: $max_width_philosphie_images;
+                margin: 0 auto;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // 代表メッセージサブセクション
+    #message{
+        .message-section-unique-box{
+
+            padding:1em 0;
+            .sign{
+                padding-top: 2em;
+                text-align: right;
+            }
+            
+            // PC版
+            @media screen and (min-width:$width_show_hamberger+1){
+                display: flex;
+                .image-wrapper{
+                    padding:0 $padding_imaga_harada_pc;
+                    figure{
+                        width: $width_image_harada_pc;
+                        img{
+                            width: 100%;
+                        }
+                        &.sp{
+                            display: none;
+                        }
+                    }
+                    
+                }
+            }
+
+            // スマホ版
+            @media screen and (max-width:$width_show_hamberger){
+                .image-wrapper{
+                    figure{
+                        width: 100%;
+                        img{
+                            width: 100%;
+                        }
+                        &.pc{
+                            display: none;
+                        }
+                    }
+                }
+                .text-wrapper{
+                    p{
+                        padding: 1em 0;
+                        line-height: $line_height_message;
+                    }
+                }
+            }
+
+        }
+    }
+
+    // 会社概要
+    #profile{
+        table{
+            max-width: $max_width_profile_table;
+            margin: 0 auto;
+        }
+    }
+
+    // 数字見るMMの導入
+    #datis-intro{
+        p{
+            text-align: center;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            padding: 1em 0;
+        }
+        a{
+            text-align: center;
+        }
+    }
+
+    // 役員紹介
+    #boardmembers{
+
+        .boardmembers-unique-box{
+
+            max-width: $width_max_width_board_members_section;
+            margin: 0 auto;
+
+            // SP版
+            @media screen and (max-width:$width_show_hamberger){
+                .boardmembers-on-pc{
+                    display: none;
+                }
+                .image-wrapper,figure,img{
+                    width: 100%;
+                }
+                .text-wrapper{
+                    font-size: 13px;
+                }
+            }
+            figure.boardmembers-on-sp{
+                width:100%;
+            }
+
+            // PC版
+            @media screen and (min-width:$width_show_hamberger+1){
+                .boardmembers-on-sp{
+                    display: none;
+                }
+                .col-inner{
+                    display: flex;
+                    .text-wrapper{
+                        padding-left: 1em;
+                    }
+                }
+            }
+            figure.boardmembers-on-pc{
+                width: $width_mambers_image_pc;
+                img{
+                    width: 100%;
+                }
+            }
+
+            // 共通
+            .col{
+                padding: 1em 0;
+                .col-inner{
+                    .text-wrapper{
+                        ul{
+                            padding-left: 1.5em;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    // アクセスサブセクション
+    #access{
+        table{
+            max-width: $max_width_access_table;
+            margin: 0 auto;
+            border-collapse: collapse;
+
+            tr{
+                border-bottom: 1px $color_front solid;
+            }
+        }
+        .map-wrapper{
+            padding: 1em 0;
+        }
+    }
+}
+
+// 新着情報の見出しだけ右寄せ
+#news{
+    .section-head{
+        text-align: left;
+        @include title-line($color_front);
+    }
+    .news-list{
+        @media screen and (min-width:$width_show_hamberger+1){
+            padding-left: $padding_row_news;            
+        }
+
+        height: $height_news_list;
+        overflow: scroll;
+    }
+    .row{
+        display: flex;
+        padding-top: 2em;
+        padding-bottom: 2em;
+
+        border-bottom: 1px solid $color_front;
+
+        .col:nth-child(2){
+            padding-left: 1em;
+        }
+    }
+}

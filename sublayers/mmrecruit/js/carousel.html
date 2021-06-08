@@ -1,0 +1,200 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+
+    // 指定された名前のHTML要素を生成します。
+    function createElement( elementName , atribute = '' , atribute_value = '' )
+    {
+        if(atribute == ''){
+            return document.createElement(elementName);
+        }
+        else{
+            var elem = document.createElement(elementName);
+            elem.setAttribute(atribute,atribute_value);
+            return elem;
+        }
+    }
+
+
+    // カルーセル内のコンテンツの内容を記述したJSONを取得します。
+    function getJSON_JQ()
+    {
+        const targetURL = "https://mmark.co.jp/sublayers/mmrecruit/data/days.json";
+        $.getJSON( targetURL, (data) =>{
+            // console.log(data);
+            return data;
+        } );
+    }
+
+
+    // カルーセルカードを設定します
+    function setCarouselCard( dest , card_num , person_id){
+
+        const carousel_card_num_prefix = "carousel-cardnum";
+        var carousel_card_id = `${carousel_card_num_prefix}-${person_id}-${card_num}`;
+
+        var carousel_card = dest.appendChild(document.createElement('div') );
+        carousel_card.setAttribute('class' , 'carousel-card');
+        carousel_card.setAttribute('id' , carousel_card_id );
+
+        return carousel_card;
+
+    }
+
+
+    // カルーセルカード内の画像コンテンツを設定します
+    function setImageWrapper( carousel_card ,person_id,num)
+    {
+
+        // 生成されるHTML
+        /*
+            carousel-card
+                [image-wrapper]
+                    figure
+                        img src = "images/[person_id][num][ext]"
+        */
+
+
+        const ext = ".jpg";
+
+        var image_wrapper = carousel_card.appendChild(document.createElement('div'));
+        image_wrapper.setAttribute('class' , 'image-wrapper');
+
+        // イメージラッパーに写真を追加
+        var figure = image_wrapper.appendChild( createElement('figure') );
+        var image = figure.appendChild( createElement('img') );
+
+        //imgタグ設定する画像へのパス
+        var image_path = ('images/' + person_id) + num + ext
+
+        // 画像へのパスを設定
+        image.setAttribute( 'src' , image_path );
+
+    }
+
+
+    // カルーセルカード内のテキストコンテンツを設定します。
+    function setTextWrapepr( carousel_card , title , sub)
+    {
+
+        // 生成されるHTML
+        /*
+            [text-wrapper]
+                inner
+                    h1
+                    hr
+                    p
+        */
+
+        var text_wrapper = carousel_card.appendChild(document.createElement('div'));
+        text_wrapper.setAttribute('class' , 'text-wrapper');
+
+        //　ラッパー直下にインナーを追加
+        var textwrapper_inner = text_wrapper.appendChild( createElement('div' , 'class' , 'text-wrapper-inner'));
+
+        // タイトルを設定
+        var h4 = textwrapper_inner.appendChild( createElement('h4') );
+        h4.textContent = title;
+
+        // タイトルと本文との間の分割線を設定
+        var hr = textwrapper_inner.appendChild( createElement('hr') );
+
+        // 本文を設定
+        var p = textwrapper_inner.appendChild( createElement('p') );
+        p.textContent = sub;
+
+    }
+
+
+    // カルーセル内に配置するカードのユニットを作成します。
+    function makecarousel_card( dest ,  title , sub , num , person_id )
+    {
+
+        // カルーセルカードを追加
+        var carousel_card = setCarouselCard(dest,num,person_id);
+        
+        // イメージラッパー設定
+        setImageWrapper( carousel_card ,person_id,num);
+
+        // テキストラッパーを設定
+        setTextWrapepr( carousel_card , title , sub ); 
+
+        return carousel_card;
+
+    }
+
+
+    // カルーセルの生成先を取得します。
+    function getDestination( person_id )
+    {
+        
+        const carousel_personid_prefix = "carousel-person";
+        var dest_elemebt_id = carousel_personid_prefix + person_id;
+
+        var dest_element_parent = document.getElementById(dest_elemebt_id);
+
+        if(dest_element_parent != null)
+            return dest_element_parent.appendChild(createElement('div' , 'class' , 'inner'));
+        else
+            return null;
+
+    }
+
+    // Carousel内のカードを配置します。
+    function placeCarouselCard( cardnum , card ){
+        
+        console.log(card);
+
+        var padding_width_inter_cards = 16;
+        
+        if(cardnum == 1){
+            padding_width_inter_cards = 0;
+        }
+
+        var width = card.clientWidth;
+        console.log(width);
+
+        card.style.left = (width*(cardnum-1))+(padding_width_inter_cards*cardnum);
+
+    }
+
+    //  JSONに基づいて一括でカルーセルカードを生成します
+    function makeCarouselCards(json)
+    {
+
+        const num_persons = 3;
+        const num_cards = 5;
+
+        // カードを作成
+        for ( let i = 1 ; i <= num_persons ; i++ )
+        {
+
+            var dest_elem = getDestination(i);
+            if(dest_elem == null)
+            {
+                console.log(`パーソンID${i}のカルーセル出力先がありません。次のパーソンに移行します。`);
+                continue;
+            }
+
+            for (let j = 1 ; j <= num_cards ; j++)
+            {
+                var sub = json[`Person${i}`][`card${j}`];
+                var card = makecarousel_card( dest_elem , sub['title'] , sub['text'] , j ,i );
+                placeCarouselCard(j,card);
+            }
+
+        }
+
+    }
+
+
+    // 以下エントリーポイント
+    const targetURL = "https://mmark.co.jp/sublayers/mmrecruit/data/days.json";
+    $.getJSON( targetURL, (data) =>{
+        makeCarouselCards(data);
+        return data;
+    } );
+
+
+</script>

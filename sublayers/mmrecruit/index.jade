@@ -1,0 +1,113 @@
+//- CSRページ
+
+
+//- 階層設定
+- var depth = '../../';
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="株式会社エム・マーケティング　公式ホームページ")
+
+        // CSSリンク
+        
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        link(href="#{depth}include/css/linkbutton.css" rel="stylesheet")   
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/publicstyle.css" rel="stylesheet")
+        link(href="#{depth}sublayers/subinclude/css/sublayers.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")     
+        link(href="css/style.css" rel="stylesheet")
+        link(href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet")
+
+        //- SwiperのCDN
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css")
+        //- link(rel="stylesheet" href="css/swiper.css")
+        
+        // ファビコン設定
+        link(href="https://mmark.co.jp/media/publicresources/images/mmark_logo.svg" rel="icon" type="image/svg+xml")
+
+        title 先輩社員の声｜株式会社エム・マーケティング　公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+    
+    body
+
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js")
+        
+        //- ヘッダ
+        include ../../include/jade/header.jade
+        main
+            - var section_name = ""
+            - var section_title = ""
+            include ../subinclude/jade/sublyaertemplates.jade
+
+            
+            section#csr-main-section.sublayer-unique-section
+                section#MMRecruit
+                    .lead-text
+                        h1 エム・マーケティング
+                            br
+                            |先輩社員の声
+                        p エムマーケティングで働く人達は、日々高い目標に
+                            |向かって頑張っています。先輩社員の声を聞いてみました。
+                    .hr
+                        img(src="images/dots.svg").dots
+
+                    section#topsection
+                        .section-hero
+                            .left-pane
+                                .image-wrapper
+                                    figure
+                                        img(src="images/iwat_stood.png")
+                            .right-pane
+                                .image-wrapper
+                                    figure
+                                        img(src="images/iwat_sat.png")
+                                .text-wrapper
+                                    h2 岩野千愛紀さん
+                                    p 総務部
+                                        br
+                                        |2016年3月入社
+
+                        section.subsection
+                            h3 Q1.この会社を選んだ理由は？
+                            p 知を広げることで社会を豊かにしたいという想いに共感できたこと。
+                                |また選考の通じて、社員を大切にしているのを感じたことが決め手です。
+
+                        section.subsection
+                            h3 Q2.この仕事のやりがいは？
+                            p 色々ありますが、まだ型化されていないところも多い分縛られ過ぎず、
+                                |これから作っていけるところにやりがいを感じています。
+
+                    //- 石田
+                    include include/section_ishida.jade
+                    
+                    //- 南里
+                    include include/section_nanri.jade
+
+                    //- 林
+                    include include/section_hayashi.jade
+
+
+        //- フッター
+        include ../../include/jade/footer.jade
+
+        include js/carousel.html
+
+        script( src= "js/carouselmover.js")
+
+        //- Swiperの設定
+        script.
+            var mySwiper = new Swiper ('.swiper-container', {
+                effect: "slide",
+                loop: true,
+                pagination: '.swiper-pagination',
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                autoHeight: true
+            });
+        //- SATORI計測タグ
+        include ../../include/js/satori.js

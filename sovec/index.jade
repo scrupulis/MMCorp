@@ -1,0 +1,68 @@
+
+-var depth = "../"
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="株式会社エム・マーケティング　公式ホームページ")
+
+        // CSSリンク
+        
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        link(href="#{depth}include/css/topmain.css" rel="stylesheet")
+        link(href="#{depth}include/css/linkbutton.css" rel="stylesheet")
+        link(href="#{depth}include/css/contact.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")        
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/publicstyle.css" rel="stylesheet")
+        link(href="#{depth}include/css/topfv.css" rel="stylesheet")
+        
+        // ファビコン設定
+        link(href="https://mmark.co.jp/media/publicresources/images/mmark_logo.svg" rel="icon" type="image/svg+xml")
+
+        title SoVecの代理販売に関するお問い合わせ｜株式会社エム・マーケティング　公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+    body
+        
+        //- ヘッダ
+        include ../include/jade/header.jade
+
+        main
+            section
+                h1 SoVeCにご興味を持ってくださり、ありがとうございます。
+                p 次の項目をご記入の上、お問い合わせください。
+                    br
+                    | 担当者が折り返しご連絡を差し上げます。
+            
+                .form
+                    #satori__creative_container
+                        script#-_-satori_creative-_-(src="//delivery.satr.jp/js/creative_set.js" data-key="0d345c196df63252")
+
+                p SoVeCについての詳細はSoVeC株式会社様のホームページをご覧ください。
+                    a(href="https://www.sovec.net/#company")
+
+
+        style.
+            main section{
+                text-align:center;
+                padding: 1em;
+                max-width:1000px;
+                margin: 0 auto;
+            }
+            form{
+                text-align:left;
+            }
+            /*footer{
+                position:absolute;
+                width:100%;
+                bottom:0;
+                left:0;
+            }*/
+        //- SATORIの計測タグを設置
+        include ../include/js/satori.js
+
+    //- フッター
+    include ../include/jade/footer.jade

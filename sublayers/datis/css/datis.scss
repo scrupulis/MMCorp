@@ -1,0 +1,90 @@
+
+@import "../../../include/css/variables.scss";
+
+// ファーストビューの背景設定
+#sublayer-background{
+
+    // スマホ版
+    @media  screen and (max-width:$width_sp){
+        background-image: url("../images/spbackground_dig.png"); 
+        position: relative;
+
+        img{
+
+            position: absolute;
+            top: 10%;
+            width: 90%;
+            max-width: 340px;
+
+            // スマホ対応
+            @media screen and(max-width:$width_4_7inch_iPhone) {
+                max-width:306px ;
+            }
+            @media screen and (max-width:$width_4_inch_iPhone){
+                max-width: 263px;
+            }
+
+
+        }
+
+    }
+
+    // PC版
+    @media screen and (min-width:$width_sp+1){
+        background-image: url("../images/pcbackground.jpg");
+        #datis-fv-front{
+            display: none;
+        }
+    }
+    
+}
+
+.only-on-datis{
+    display: block;
+}
+
+.on-datis-hide{
+    display: none;
+}
+
+article{
+    padding: 1em;
+    .inner{
+        .inroduction{
+            text-align: center;
+            padding-bottom: 1em;
+            // PCでは表示しない
+            @media screen and (min-width:$width_sp + 1 ){
+                display: none;
+            }
+            p{
+                color: #1f2a6b;
+            }
+        }
+
+        figure{
+            &.pc{
+                @media screen and (max-width:$width_sp){
+                    display: none;
+                }
+                max-width: 800px;
+                margin: auto;
+            }
+            &.sp{
+                @media screen and (min-width:$width_sp + 1){
+                    display: none;
+                }
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+#datis-contact{
+    h1{
+        text-align: center;
+        padding-bottom:1em;
+        padding-top: 2em;
+    }
+}

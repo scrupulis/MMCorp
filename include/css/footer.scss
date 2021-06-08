@@ -1,0 +1,61 @@
+
+@import "variables.scss";
+@import "mixin.scss";
+
+
+.footer-text{
+    color: white;
+    text-align: center;
+    font-size: $font_size_footer;
+}
+
+footer{
+
+    a{
+        padding:0 .5em;
+    }
+
+    
+    // メインコンテンツとの間に余白を設ける
+    margin-top:$far_inter_sections;
+
+    div,ul,ol,li,p,a,table,h1,h2,h3,h4{
+        color: white;
+        font-size: $font_size_footer;
+    }
+    h1,h2,h3,h4{
+        text-align: left;
+        padding: .5em 0;
+        @include title-line( white);
+    }
+
+    background-color:$color_main;
+    .inner{
+        padding:$padding_footer_inner;
+        max-width: $width_footer_contents;
+        margin: auto;
+        div{
+            text-align: center;
+        }
+        .menu{
+            padding: $padding_footer_inner 0;
+            .info{
+                padding-top: 1em;
+            }
+            ul{
+                list-style: none;
+                @include horizontal_ul();
+                li{
+                    a{
+                        color: white;
+                        font-size: $font_size_footer;
+
+                        &:hover{
+                            color: $color_accent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

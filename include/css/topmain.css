@@ -1,0 +1,157 @@
+.section-head {
+  text-align: center;
+  padding-bottom: .5em; }
+
+.subtitle {
+  font-size: 16px; }
+
+.content-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 2em; }
+  @media screen and (max-width: 375px) {
+    .content-wrapper {
+      padding: 0 1em; } }
+  .content-wrapper section {
+    padding-top: 5em !important; }
+
+.default-table td, .default-table th {
+  padding: 1em 0; }
+.default-table th {
+  padding-left: 1em;
+  padding-right: 1em; }
+.default-table td {
+  padding-right: 1em; }
+
+#business img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px; }
+#business .business-card .text-wrapper p {
+  padding-bottom: 1em; }
+@media screen and (min-width: 701px) {
+  #business .subsection:nth-child(odd) .text-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%; }
+  #business .subsection:nth-child(even) .text-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%; }
+  #business .subsection:nth-child(even) .image-wrapper {
+    position: absolute;
+    right: 0; }
+  #business .business-card {
+    position: relative;
+    height: 400px; }
+    #business .business-card .text-wrapper {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 2em; } }
+
+#company #philosophies .section-unique-box figure {
+  max-width: 540px;
+  margin: 0 auto; }
+  #company #philosophies .section-unique-box figure img {
+    width: 100%; }
+#company #message .message-section-unique-box {
+  padding: 1em 0; }
+  #company #message .message-section-unique-box .sign {
+    padding-top: 2em;
+    text-align: right; }
+  @media screen and (min-width: 701px) {
+    #company #message .message-section-unique-box {
+      display: flex; }
+      #company #message .message-section-unique-box .image-wrapper {
+        padding: 0 1em; }
+        #company #message .message-section-unique-box .image-wrapper figure {
+          width: 230px; }
+          #company #message .message-section-unique-box .image-wrapper figure img {
+            width: 100%; }
+          #company #message .message-section-unique-box .image-wrapper figure.sp {
+            display: none; } }
+  @media screen and (max-width: 700px) {
+    #company #message .message-section-unique-box .image-wrapper figure {
+      width: 100%; }
+      #company #message .message-section-unique-box .image-wrapper figure img {
+        width: 100%; }
+      #company #message .message-section-unique-box .image-wrapper figure.pc {
+        display: none; }
+    #company #message .message-section-unique-box .text-wrapper p {
+      padding: 1em 0;
+      line-height: 2em; } }
+#company #profile table {
+  max-width: 1000px;
+  margin: 0 auto; }
+#company #datis-intro p {
+  text-align: center; }
+#company #datis-intro .button {
+  display: flex;
+  justify-content: center;
+  padding: 1em 0; }
+#company #datis-intro a {
+  text-align: center; }
+#company #boardmembers .boardmembers-unique-box {
+  max-width: 600px;
+  margin: 0 auto; }
+  @media screen and (max-width: 700px) {
+    #company #boardmembers .boardmembers-unique-box .boardmembers-on-pc {
+      display: none; }
+    #company #boardmembers .boardmembers-unique-box .image-wrapper, #company #boardmembers .boardmembers-unique-box figure, #company #boardmembers .boardmembers-unique-box img {
+      width: 100%; }
+    #company #boardmembers .boardmembers-unique-box .text-wrapper {
+      font-size: 13px; } }
+  #company #boardmembers .boardmembers-unique-box figure.boardmembers-on-sp {
+    width: 100%; }
+  @media screen and (min-width: 701px) {
+    #company #boardmembers .boardmembers-unique-box .boardmembers-on-sp {
+      display: none; }
+    #company #boardmembers .boardmembers-unique-box .col-inner {
+      display: flex; }
+      #company #boardmembers .boardmembers-unique-box .col-inner .text-wrapper {
+        padding-left: 1em; } }
+  #company #boardmembers .boardmembers-unique-box figure.boardmembers-on-pc {
+    width: 145px; }
+    #company #boardmembers .boardmembers-unique-box figure.boardmembers-on-pc img {
+      width: 100%; }
+  #company #boardmembers .boardmembers-unique-box .col {
+    padding: 1em 0; }
+    #company #boardmembers .boardmembers-unique-box .col .col-inner .text-wrapper ul {
+      padding-left: 1.5em; }
+#company #access table {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse; }
+  #company #access table tr {
+    border-bottom: 1px #323232 solid; }
+#company #access .map-wrapper {
+  padding: 1em 0; }
+
+#news .section-head {
+  text-align: left;
+  display: flex;
+  align-items: center; }
+  #news .section-head::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: #323232;
+    display: block;
+    margin-left: 1em; }
+#news .news-list {
+  height: 20em;
+  overflow: scroll; }
+  @media screen and (min-width: 701px) {
+    #news .news-list {
+      padding-left: 8em; } }
+#news .row {
+  display: flex;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #323232; }
+  #news .row .col:nth-child(2) {
+    padding-left: 1em; }
+
+/*# sourceMappingURL=topmain.css.map */

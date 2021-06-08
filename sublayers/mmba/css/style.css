@@ -1,0 +1,180 @@
+@charset "UTF-8";
+@media screen and (max-width: 700px) {
+  .mmba-only-on-pc {
+    display: none; } }
+
+@media screen and (min-width: 701px) {
+  .mmba-only-on-pc {
+    display: none; } }
+
+#sublayer-background {
+  background-image: url("../images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media screen and (max-width: 700px) {
+    #sublayer-background {
+      background-image: url("../images/herosp.jpg"); } }
+  #sublayer-background h1 {
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.76); }
+
+.text p {
+  line-height: 1.75em;
+  padding: 1em 0; }
+
+@media screen and (max-width: 700px) {
+  .mmbifig-on-pc {
+    display: none; } }
+@media screen and (min-width: 701px) {
+  .mmbifig-on-sp {
+    display: none; } }
+figure, img {
+  width: 100%; }
+
+article.features article {
+  width: 70%;
+  margin: 0 auto; }
+  @media (max-width: 700px) {
+    article.features article {
+      width: 100%; } }
+article.features article.strength .inner {
+  padding-bottom: 3em; }
+  article.features article.strength .inner h2 {
+    color: white;
+    background-color: #5c5c9b;
+    width: 10em;
+    padding: 0.1em 0;
+    margin: 0.5em auto; }
+    @media (max-width: 700px) {
+      article.features article.strength .inner h2 {
+        width: 100%; } }
+  article.features article.strength .inner div div:last-child ul {
+    list-style: none; }
+    article.features article.strength .inner div div:last-child ul li {
+      font-size: 28px;
+      padding: 0 0.5em; }
+      @media (max-width: 700px) {
+        article.features article.strength .inner div div:last-child ul li {
+          font-size: 20px; } }
+      article.features article.strength .inner div div:last-child ul li::before {
+        content: "・"; }
+        @media (min-width: 701px) {
+          article.features article.strength .inner div div:last-child ul li::before {
+            content: "";
+            display: inline-block;
+            background-image: url("../images/checkbox.png");
+            background-size: cover;
+            width: 1.5em;
+            height: 1em;
+            margin-right: 0.5em; } }
+article.features article.benefit_teachers {
+  padding-bottom: 3em; }
+  article.features article.benefit_teachers .inner h2 {
+    color: white;
+    background-color: #9e8a2f;
+    width: 10em;
+    padding: 0.1em 0;
+    margin: 0.5em auto; }
+    @media (max-width: 700px) {
+      article.features article.benefit_teachers .inner h2 {
+        width: 100%; } }
+  article.features article.benefit_teachers .inner div > div {
+    display: flex;
+    align-items: center; }
+    article.features article.benefit_teachers .inner div > div div.benefit_card {
+      margin: .3em;
+      width: 50%;
+      min-height: 100px;
+      border: solid 1px #323232;
+      flex-direction: row; }
+      @media (max-width: 700px) {
+        article.features article.benefit_teachers .inner div > div div.benefit_card {
+          border: none;
+          width: 100%;
+          min-height: 1.75em; } }
+      article.features article.benefit_teachers .inner div > div div.benefit_card div:first-child div {
+        padding: 0 .5em; }
+        article.features article.benefit_teachers .inner div > div div.benefit_card div:first-child div p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 2em;
+          width: 2em;
+          color: white;
+          background-color: #9e8a2f;
+          border-radius: 100%;
+          padding-top: 0 !important; }
+    @media (max-width: 700px) {
+      article.features article.benefit_teachers .inner div > div {
+        flex-direction: column; } }
+article.features article.benefit_students .inner h2 {
+  color: white;
+  background-color: #272a57;
+  width: 10em;
+  padding: 0.1em 0;
+  margin: 0.5em auto; }
+  @media (max-width: 700px) {
+    article.features article.benefit_students .inner h2 {
+      width: 100%; } }
+article.features article.benefit_students .inner div > div {
+  display: flex;
+  align-items: center; }
+  article.features article.benefit_students .inner div > div div.benefit_card {
+    margin: .3em;
+    width: 50%;
+    min-height: 100px;
+    border: solid 1px #323232;
+    flex-direction: row; }
+    @media (max-width: 700px) {
+      article.features article.benefit_students .inner div > div div.benefit_card {
+        border: none;
+        width: 100%;
+        min-height: 1.75em; } }
+    article.features article.benefit_students .inner div > div div.benefit_card div:first-child div {
+      padding: 0 .5em; }
+      article.features article.benefit_students .inner div > div div.benefit_card div:first-child div p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2em;
+        width: 2em;
+        color: white;
+        background-color: #272a57;
+        border-radius: 100%;
+        padding-top: 0 !important; }
+  @media (max-width: 700px) {
+    article.features article.benefit_students .inner div > div {
+      flex-direction: column; } }
+
+article.industries .inner h2 {
+  padding: 3em 0; }
+article.industries .inner article:first-child div {
+  background-color: #f2f2f2;
+  padding: 1em 0; }
+  article.industries .inner article:first-child div table {
+    width: 90%;
+    margin: auto; }
+    article.industries .inner article:first-child div table td {
+      padding-right: 1em; }
+    article.industries .inner article:first-child div table tr:last-of-type td:last-of-type {
+      text-align: right; }
+article.industries .inner article:nth-child(2) h2 span {
+  font-size: 1.5em;
+  color: #5c5c9b; }
+article.industries .inner article:nth-child(2) h2 div {
+  width: 14em;
+  margin: 0 auto; }
+article.industries .inner article:nth-child(2) > div#results .inner figure {
+  width: 70%;
+  margin: 0 auto; }
+  @media (max-width: 700px) {
+    article.industries .inner article:nth-child(2) > div#results .inner figure {
+      width: 100%; } }
+
+.contact {
+  padding-top: 1em; }
+
+/*# sourceMappingURL=style.css.map */

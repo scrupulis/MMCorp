@@ -1,0 +1,251 @@
+
+@import "../../../include/css/variables.scss";
+@import "../../../include/css/mixin.scss";
+
+
+$aceent_color_teachers:#9e8a2f;
+$accent_color_students:#272a57;
+$accent_color_common:#5c5c9b;
+$distane_inter_elements:3em;
+$width_iPhone6Plus:414px;
+
+
+.mmba-only-on-pc{
+    @media screen and (max-width:$width_show_hamberger){
+        display: none;
+    }
+}
+
+.mmba-only-on-pc{
+    @media screen and (min-width:$width_show_hamberger+1){
+        display: none;
+    }
+}
+
+@mixin in-features-h2($background-color){
+    color: white;
+    background-color: $background-color;
+    width: 10em;
+    padding:0.1em 0;
+    margin:0.5em auto;
+
+    @media (max-width:$width_show_hamberger){
+        width:100%;
+    }
+
+}
+// 講師、受講生のメリット一覧記事の共通スタイル
+@mixin artile-benefit($color_numbers){
+    .inner{
+        h2{
+            @include in-features-h2($color_numbers);
+        }
+        div{
+            > div{
+                display: flex;
+                align-items: center;
+                div.benefit_card{
+                    @include benefit-card-base($color_numbers);
+                }
+                @media (max-width:$width_show_hamberger){
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@mixin  benefit-card-base($color_numbers) {
+    margin: .3em;
+    width: 50%;
+    min-height: 100px;
+    border: solid 1px  $color_front;
+    flex-direction: row;
+
+    @media (max-width:$width_show_hamberger){
+        border: none;
+        width: 100%;
+        min-height: 1.75em;
+    }
+
+    div:first-child{
+        div{
+            padding: 0 .5em;
+            p{
+                $scale:2em;
+                @include flex_template_1(center,center);
+                height: $scale;
+                width: $scale;
+                color: white;
+                background-color:$color_numbers;
+                border-radius: 100%;
+                padding-top: 0 !important;
+            }
+        }
+    }
+}
+
+// ファーストビューの背景設定
+#sublayer-background{
+
+    background-image: url('../images/hero.jpg');
+    @media screen  and (max-width:$width_show_hamberger){
+        background-image: url("../images/herosp.jpg");
+    }
+
+    background-position: center;
+    background-size:cover;
+
+    @include flex_template_1(center,center);
+    h1{
+        color:white;
+        text-shadow:0px 0px 5px rgba(0,0,0,0.76);
+    }
+
+    
+}
+.text{
+    p{
+        line-height:1.75em ;
+        padding: 1em 0;
+    }
+}
+@media screen and (max-width:$width_show_hamberger){
+    .mmbifig-on-pc{
+        display: none;
+    }
+}
+
+@media screen and (min-width:$width_show_hamberger+1){
+    .mmbifig-on-sp{
+        display: none;
+    }
+}
+
+
+figure,img{
+    width: 100%;
+}
+
+ // MMBAの特徴
+article.features{
+
+    $width_inner_contents : 70%;
+
+    article{
+        width:$width_inner_contents;
+        @media (max-width:$width_show_hamberger){
+            width: 100%;
+        }
+        margin:0 auto;
+    }
+
+    // MMBAの強み
+    article.strength{
+        .inner{
+            padding-bottom: $distane_inter_elements;
+            h2{
+                @include in-features-h2($accent_color_common);
+            }
+            div{
+                // 一覧側
+                div:last-child{
+                    ul {
+                        list-style: none;
+                        li{
+                            font-size: 28px;
+                            padding:0 0.5em;
+                            @media (max-width:$width_show_hamberger){
+                                font-size: 20px;
+                            }
+                            &::before{
+                                content:"・";
+                                @media (min-width:$width_show_hamberger+1){
+                                    content: "";
+                                    display: inline-block;
+                                    background-image: url('../images/checkbox.png');
+                                    background-size: cover;
+                                    width: 1.5em;
+                                    height: 1em;
+                                    margin-right: 0.5em;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    // 講師のメリット
+    article.benefit_teachers{
+        @include artile-benefit($aceent_color_teachers);
+        padding-bottom: $distane_inter_elements;
+    }
+
+    // 受講生のメリット
+    article.benefit_students{
+        @include artile-benefit($accent_color_students);
+    }
+}
+
+// 開催業種
+article.industries{
+    .inner{
+        h2{
+            padding: $distane_inter_elements 0;
+        }
+        // 開催業種一覧
+        article:first-child{
+            div{
+                background-color: #f2f2f2;
+                padding: 1em 0;
+                table{
+                    width: 90%;
+                    margin: auto;
+                    td{
+                        padding-right: 1em;
+                    }
+                    tr:last-of-type{
+                        td:last-of-type{
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 累計開催業種
+        article:nth-child(2){
+            h2{
+                span{
+                    font-size: 1.5em;
+                    color: $accent_color_common;
+                }
+                div{
+                    width: 14em;
+                    margin: 0 auto;
+                }
+            }
+
+            > div#results{
+                .inner{
+                    figure{
+                        width:70%;
+                        margin:0 auto;
+                        @media (max-width:$width_show_hamberger){
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+.contact{
+    padding-top: 1em;
+}

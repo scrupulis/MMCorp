@@ -1,0 +1,25 @@
+#sublayer-background {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+h2 {
+  padding: 1.5em 0;
+  text-align: left; }
+
+ul, ol {
+  padding-left: 2em; }
+
+p, li {
+  line-height: 2em; }
+
+p > ul li > ol li, p ol li > ol li {
+  list-style: none;
+  counter-increment: cnt; }
+  p > ul li > ol li:before, p ol li > ol li:before {
+    content: "(" counter(cnt) ") "; }
+
+.alphabet {
+  list-style-type: upper-latin; }
+
+/*# sourceMappingURL=style.css.map */

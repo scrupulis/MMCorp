@@ -1,0 +1,121 @@
+@import "variables.scss";
+
+@mixin horizontal_ul {
+    display: inline;
+    li{
+        display: inline;
+    }
+}
+
+@mixin hide_smaller_than($width){
+    @media screen and (max-width:$width){
+        display: none;
+    }
+}
+
+@mixin hide_bigger_than($width){
+    @media screen and (min-width:$width){
+        display: none;
+    }
+}
+
+@mixin flex_template_1($justify-content , $align-items ){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin dropshadow( $offset_x , $offset_y , $blur_radisus , $color ) {
+    filter: drop-shadow($offset_x $offset_y $blur_radisus $color);
+    -webkit-filter: drop-shadow($offset_x $offset_y  $blur_radisus  $color);
+    -moz-filter: drop-shadow($offset_x $offset_y  $blur_radisus  $color);
+}
+@mixin flex-centering{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// 既存のwidth値を!importantで上書きします。
+@mixin override-width($width){
+    width: $width !important;
+}   
+
+
+// テーブルの規定のスタイル設定
+@mixin default-table{
+    td,th{
+        padding: 1em 0;
+    }
+    th{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    td{
+        padding-right: 1em;
+    }
+}
+
+@mixin title-line($line_color){
+    display: flex;
+    align-items: center;
+
+    &::after{
+        content: "";
+        height: 1px;
+        flex-grow: 1;
+        background-color: $line_color;
+        display: block;
+        margin-left: 1em;
+    }
+}
+
+@mixin cutout($scale , $background-color , $left , $widht_cutpout){
+    position: relative;
+    height: $scale;
+    line-height: $scale;
+
+    // background: $background-color;/*塗りつぶし色*/
+
+    &::after{
+        position: absolute;
+        content: '';
+        width: 0px;
+        height: 0px;
+        z-index: 1;
+        top: 0;
+        left: $left; /*100%で要素の右側、0で左側に配置*/
+        border-width: $scale/2 0px $scale/2 $widht_cutpout;
+        border-color: transparent transparent transparent  $background-color;
+        border-style: solid;
+    }
+}
+
+// MMRecruit内のカルーセル内カードの幅を、ブラウザの幅に応じて決定します。
+@mixin  getCarouselCardWidth() {
+    @media screen and  ( max-width:  $width_4_7inch_iPhone ){
+        width: $width_carousel_card_medium;
+    }
+    @media screen and (max-width: $width_4_inch_iPhone ){
+        width: $width_carousel_card_small;
+    }
+}
+
+// MMRecruit内noカルーセル内カードの高さを、ブラウザの幅に応じて決定します。  
+@mixin getCarouselCardHeight() {
+    @media screen and ( max-width: $width_4_7inch_iPhone ){
+        height: $height_carousel_card_medium;
+    }
+    @media screen and ( max-width: $width_4_inch_iPhone ){
+        height: $height_carousel_card_small;
+    }
+}
+
+@mixin gerCardPlace($counter){
+    @media screen and  ( max-width:  $width_4_7inch_iPhone ){
+        left: $width_carousel_card_medium*$counter;
+    }
+    @media screen and (max-width: $width_4_inch_iPhone ){
+        left: $width_carousel_card_small*$counter;
+    }
+}

@@ -1,0 +1,58 @@
+//- 新型コロナに関するお知らせのページ
+
+
+//- 階層設定
+- var depth = '../../';
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="株式会社エム・マーケティング　公式ホームページ")
+
+        // CSSリンク
+        
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        link(href="#{depth}include/css/linkbutton.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")        
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/publicstyle.css" rel="stylesheet")
+        link(href="#{depth}sublayers/subinclude/css/sublayers.css" rel="stylesheet")
+        link(href="css/style.css" rel="stylesheet")
+        
+        // ファビコン設定
+        link(href="https://mmark.co.jp/media/publicresources/images/mmark_logo.svg" rel="icon" type="image/svg+xml")
+
+        title 新型コロナ感染症感染拡大に伴うお知らせ｜株式会社エム・マーケティング　公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+    
+    body
+
+        //- ヘッダ
+        include ../../include/jade/header.jade
+
+        main
+            - var section_name = "COVID"
+            - var section_title = "お知らせ"
+            include ../subinclude/jade/sublyaertemplates.jade
+
+            section#csr-main-section.sublayer-unique-section 
+                h2 新型コロナウイルスの感染拡大に伴うテレワーク実施のお知らせ
+                p 初めに、新型コロナウイルス感染症によりお亡くなりになられた方々に謹んでお悔み申し上げると共に、罹患された方々には心よりお見舞い申し上げます。 弊社エム・マーケティングでは、新型コロナウイルス感染症の拡大防止および従業員とそのご家族の方の安全確保のため、4月7日より下記の通り業務体制を変更致しております。
+                p 
+                    ul
+                        li 原則としてテレワークとする
+                        li 社外のお客様との打ち合わせ等も、原則オンラインで行う
+                        li 新型コロナウイルス感染症の情勢を鑑み、2020年6月1日以降は週2回のテレワークを推奨する
+                p 【期間】
+                    br
+                    |2020年4月7日（火）から
+                
+                p テレワーク期間に伴い、ご迷惑をおかけする方もいらっしゃるかと存じますが、社員とその家族やお客様の健康と安全、並びに社会全体としての感染拡大を防ぐためですので、何卒ご理解頂けますと幸いです。
+
+        //- フッター
+        include ../../include/jade/footer.jade
+        //- SATORI計測タグ
+        include ../../include/js/satori.js

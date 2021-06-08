@@ -1,0 +1,112 @@
+@charset "UTF-8";
+.contact-form-wrapper {
+  padding: 1em 0; }
+
+.sub-h1 {
+  font-size: 16px;
+  /* padding: 1em 0; */ }
+
+.contact-form-outer {
+  width: 100%;
+  /* padding: 0 2em; */ }
+
+/* フォーム */
+.contact-form-wrapper {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center; }
+
+.contact-form-row {
+  padding: 1em 0; }
+
+.contact-form-col-wrapper {
+  display: flex; }
+
+.contact-form-col {
+  vertical-align: top;
+  text-align: left; }
+
+.contact-form-right-col {
+  font-size: 14px;
+  color: #383838; }
+
+.row-header {
+  width: 12em;
+  font-weight: 500;
+  font-size: 16px;
+  padding-right: 2em; }
+
+.required-item-header::after {
+  color: red;
+  content: "※"; }
+
+.textfiled {
+  font-family: 'HiraKakuProN-W3', "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+  font-size: 14px;
+  background-color: #f2f2f2;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 0.5em 0;
+  padding-left: 0.4em;
+  transition: 0.3s;
+  box-sizing: border-box;
+  color: #808080;
+  width: 20em; }
+
+.textfiled:focus {
+  border: 1px solid #383838;
+  outline: none; }
+
+.telnum {
+  width: 6em; }
+
+.textfield-content {
+  max-width: 30em;
+  width: 25em;
+  font-size: 14px; }
+
+/* スマホの場合はシングルカラムにする */
+@media screen and (max-width: 640px) {
+  .contact-form-col-wrapper {
+    display: block; } }
+/* 表示画面が小さい時はテキストフィールドの幅を調整 */
+@media screen and (max-width: 430px) {
+  .textfiled:not(.telnum), .textfield-content {
+    width: auto; } }
+/* 画面サイズが小さい場合はレイアウトを調整 */
+@media screen and (max-width: 430px) {
+  .telnum {
+    width: 5em; }
+
+  .textfiled-name {
+    width: 7em !important; }
+
+  .contact-form-outer {
+    padding: 0; } }
+.submit-button {
+  -webkit-appearance: none;
+  font-family: 'HiraKakuProN-W3', "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+  font-size: 20px;
+  line-height: 1.2em;
+  transition: 0.3s;
+  outline: none;
+  padding: 0.5em;
+  border-radius: 0;
+  border: solid 1px black;
+  color: #000000;
+  background-color: white;
+  width: 12em; }
+
+.submit-button:hover {
+  background-color: #d9c146;
+  border-color: #d9c146; }
+
+.back-button {
+  background-color: #d9c146;
+  border: solid 1px #757575;
+  color: #323232; }
+
+.back-button:hover {
+  background-color: #757575;
+  color: white; }
+
+/*# sourceMappingURL=contact.css.map */

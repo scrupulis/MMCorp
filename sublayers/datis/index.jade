@@ -1,0 +1,50 @@
+//- 下層ページ　数字で見るMM
+
+- var depth = '../../';
+- var title = '数字で見るMM｜株式会社エム・マーケティング　公式ホームページ'
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="#{title}")
+
+        // CSSリンク
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")        
+
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/contact.css" rel="stylesheet")
+        link(href="#{depth}sublayers/subinclude/css/sublayers.css" rel="stylesheet")
+        link(href="#{depth}sublayers/datis/css/datis.css" rel="stylesheet")
+        
+        // ファビコン設定
+        link(href="https://mmark.co.jp/media/publicresources/images/favicon.png" rel="icon")
+
+        title 数字で見るエム・マーケティング｜株式会社エム・マーケティング公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+
+    //- ヘッダ
+    include ../../include/jade/header.jade
+
+    body
+
+        main 
+            - var section_name = "#datis";
+            - var section_title = "数字で見るMM";
+            include ../subinclude/jade/sublyaertemplates.jade
+            include include/datis.jade
+            
+            section#datis-contact
+                h1 お問い合わせ
+                include ../../include/jade/contact.html
+                include ../../include/API/APICALLER_DATIS.html
+        //- SATORI計測タグ
+        include ../../include/js/satori.js
+
+    //- フッター
+    include ../../include/jade/footer.jade
+        
+

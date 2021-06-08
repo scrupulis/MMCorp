@@ -1,0 +1,52 @@
+
+-var depth = "../"
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="株式会社エム・マーケティング　公式ホームページ")
+
+        // CSSリンク
+        
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        link(href="#{depth}include/css/topmain.css" rel="stylesheet")
+        link(href="#{depth}include/css/linkbutton.css" rel="stylesheet")
+        link(href="#{depth}include/css/contact.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")        
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/publicstyle.css" rel="stylesheet")
+        link(href="#{depth}include/css/topfv.css" rel="stylesheet")
+        
+        // ファビコン設定
+        link(href="https://mmark.co.jp/media/publicresources/images/mmark_logo.svg" rel="icon" type="image/svg+xml")
+
+        title お問い合わせありがとうございます。｜株式会社エム・マーケティング　公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+    body
+        
+        //- ヘッダ
+        include ../include/jade/header.jade
+
+        main
+            section
+                h1 お問い合わせありがとうございます。
+                p 後ほど、担当者から折り返しご連絡致します。
+
+        style.
+            main section{
+                text-align:center;
+            }
+            footer{
+                position:absolute;
+                width:100%;
+                bottom:0;
+                left:0;
+            }
+        //- SATORIの計測タグを設置
+        include ../include/js/satori.js
+
+    //- フッター
+    include ../include/jade/footer.jade

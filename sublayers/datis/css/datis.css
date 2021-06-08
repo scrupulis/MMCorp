@@ -1,0 +1,57 @@
+@media screen and (max-width: 700px) {
+  #sublayer-background {
+    background-image: url("../images/spbackground_dig.png");
+    position: relative; }
+    #sublayer-background img {
+      position: absolute;
+      top: 10%;
+      width: 90%;
+      max-width: 340px; } }
+    @media screen and (max-width: 700px) and (max-width: 375px) {
+      #sublayer-background img {
+        max-width: 306px; } }
+    @media screen and (max-width: 700px) and (max-width: 320px) {
+      #sublayer-background img {
+        max-width: 263px; } }
+
+@media screen and (min-width: 701px) {
+  #sublayer-background {
+    background-image: url("../images/pcbackground.jpg"); }
+    #sublayer-background #datis-fv-front {
+      display: none; } }
+
+.only-on-datis {
+  display: block; }
+
+.on-datis-hide {
+  display: none; }
+
+article {
+  padding: 1em; }
+  article .inner .inroduction {
+    text-align: center;
+    padding-bottom: 1em; }
+    @media screen and (min-width: 701px) {
+      article .inner .inroduction {
+        display: none; } }
+    article .inner .inroduction p {
+      color: #1f2a6b; }
+  article .inner figure.pc {
+    max-width: 800px;
+    margin: auto; }
+    @media screen and (max-width: 700px) {
+      article .inner figure.pc {
+        display: none; } }
+  article .inner figure.sp {
+    width: 80%;
+    margin: 0 auto; }
+    @media screen and (min-width: 701px) {
+      article .inner figure.sp {
+        display: none; } }
+
+#datis-contact h1 {
+  text-align: center;
+  padding-bottom: 1em;
+  padding-top: 2em; }
+
+/*# sourceMappingURL=datis.css.map */

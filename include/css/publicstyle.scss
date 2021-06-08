@@ -1,0 +1,7 @@
+// 全ページ共通で使用するスタイルの記述
+
+.fadein{
+    opacity : 0;
+    transform: translateY(20px);
+    transition: all .5s;
+}

@@ -1,0 +1,93 @@
+//- 特定商取引法に基づく表示
+
+
+//- 階層設定
+- var depth = '../../';
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="特定商取引法に基づく表示｜株式会社エム・マーケティング　公式ホームページ")
+
+        // CSSリンク
+        
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        //- link(href="#{depth}include/css/topfv.css" rel="stylesheet")
+        //- link(href="#{depth}include/css/topmain.css" rel="stylesheet")
+        link(href="#{depth}include/css/linkbutton.css" rel="stylesheet")
+        //- link(href="#{depth}include/css/contact.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")        
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/publicstyle.css" rel="stylesheet")
+        link(href="#{depth}sublayers/subinclude/css/sublayers.css" rel="stylesheet")
+        link(href="css/style.css" rel="stylesheet")
+        
+        // ファビコン設定
+        link(href="https://mmark.co.jp/media/publicresources/images/mmark_logo.svg" rel="icon" type="image/svg+xml")
+
+        title 特定商取引法に基づく表示｜株式会社エム・マーケティング　公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+    
+    body
+
+        //- ヘッダ
+        include ../../include/jade/header.jade
+
+        main
+            - var section_name = "tokusho"
+            - var section_title = "特定商取引法に基づく表示"
+            include ../subinclude/jade/sublyaertemplates.jade
+
+            section#csr-main-section.sublayer-unique-section 
+                article
+                    table
+                        tbody
+                            tr 
+                                th 販売業者
+                                td 株式会社エム・マーケティング
+                            tr
+                                th 運営統括責任者
+                                td 代表取締役　原田正文
+                            tr
+                                th 所在地
+                                td 〒102-0083
+                                    br
+                                    |東京都千代田区麹町3-2-9 麴町PREX5階
+                            tr 
+                                th メールアドレス
+                                td support@mmark.net
+                            tr
+                                th 電話
+                                td 03-6804-5580
+                            tr
+                                th FAX
+                                td 03-6701-2480
+                            tr 
+                                th 販売価格
+                                td 販売ページに記載
+                            tr 
+                                th 商品以外の必要金額
+                                td 振込手数料はご負担ください
+                            tr 
+                                th 商品の引き渡し時期
+                                td 販売ページに特段の記載が無い場合は注文日より、7営業日以内に発送
+                            tr 
+                                th 支払い方法
+                                td クレジットカード決済、銀行振り込み、代引き
+                            tr 
+                                th 返品・不良品について
+                                td データが壊れている等、商品に欠陥がある場合は交換させていただきます。情報という商品特性上、基本的には返品・返金はお受けしませんが、販売ページに返金保証等が付く場合はそちらを優先します。
+                            tr  
+                                th 個人情報について
+                                td 当社はお客様のプライバシーを第一に考え運営しております。詳細は弊社
+                                    a(href="#{depth}sublayers/privacypolicy") プライバシーポリシー
+                                    |をご覧ください。
+
+        //- フッター
+        include ../../include/jade/footer.jade
+
+        //- SATORI計測タグ
+        include ../../include/js/satori.js

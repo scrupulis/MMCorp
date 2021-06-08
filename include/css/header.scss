@@ -1,0 +1,144 @@
+
+// ヘッダのスタイル
+// Path = ~/include/css
+
+@import "variables.scss";
+@import "mixin.scss";
+
+header{
+    
+    background-color: $color_main;
+
+    // スマホ版でヘッダが画面上部に固定されるようにする
+    @media screen and (max-width:$width_show_hamberger){
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        @include dropshadow(0px , 4px , 7px , rgba(0,0,0,0.47));
+    }
+
+    > .inner{
+        
+        max-width:$max_width_content;
+        margin: auto;
+        padding:$padding_header_vertical $padding_header_horizontal;
+        height: $height_sp_header;
+        box-sizing: border-box;
+
+        // flex指定
+        @include flex_template_1(space-between,center);
+
+        // ロゴ部分
+        .header-logo{
+            a{
+                figure{
+                    img{
+                        width:$width_header_logo;
+                        height: $height_header_logo;
+                    }
+                }
+            }
+        }
+
+        // ナビ部分
+        nav{
+            ul{
+                @include horizontal_ul;
+                list-style: none;
+                li{
+                    padding: .5em;
+                    @media screen and( min-width:$width_show_hamberger+1 ) {
+                        font-size: $font_size_header_pc;
+                    }
+                }
+            }
+
+            &.pc{
+                @include hide_smaller_than($width_show_hamberger);
+            }
+            &.sp{
+                @include hide_bigger_than($width_show_hamberger+1);
+
+                .hamberger-wrapper{
+                    .inner{
+
+                        // ハンバーガーメニュー開閉ボタン
+                        #hamberger-toggle-switch{
+
+                            width: $width_hamburger;
+                            height: $height_hamburger;
+                            display: inline-block;
+                            position: relative;
+                            
+                            // ハンバーガーメニューの各棒のスタイル
+                            span{
+            
+                                transition: 0.3s;
+                                
+                                position: absolute;                                
+                                left: 0;
+            
+                                display: inline-block;
+                                background: white;
+                                box-sizing: border-box;
+                                width: $width_hamburger;
+                                height: $height_bar;
+                                border-radius: $border_radius_images;
+
+                                &:nth-of-type(1){
+                                    top:$distance_bars*1-$distance_bars/2;
+                                }
+                                &:nth-of-type(2){
+                                    top:$distance_bars*2-$distance_bars/2;
+                                }
+                                &:nth-of-type(3){
+                                    top:$distance_bars*3-$distance_bars/2;
+                                }
+            
+                            }
+            
+
+                            // 展開後のビジュアル
+                            &.active{
+                                span:nth-of-type(1){
+                                    -webkit-transform: translateY($distance_bars) rotate(-1*$rotate_deg_bar);
+                                    transform: translateY($distance_bars) rotate(-1*$rotate_deg_bar);
+                                }
+                                span:nth-of-type(2){
+                                    opacity: 0;
+                                }
+                                span:nth-of-type(3){
+                                    -webkit-transform: translateY(-$distance_bars) rotate($rotate_deg_bar);
+                                    transform: translateY(-$distance_bars) rotate($rotate_deg_bar);
+                                }
+                            }
+
+                        }
+                        
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    // ハンバーガーメニューで開閉する部分
+    #sp-nav-body{
+        @include hide_bigger_than($width_show_hamberger+1);
+        display: none;
+        text-align: right;
+        padding: 0 $padding_header_horizontal;
+        padding-bottom: $padding_header_horizontal;
+
+        ul{
+            list-style: none;
+        }
+    }
+
+    // ヘッダ内全てのa
+    a{
+        color: white;
+    }
+
+}

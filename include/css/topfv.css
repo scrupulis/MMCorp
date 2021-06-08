@@ -1,0 +1,88 @@
+@media screen and (max-width: 700px) {
+  #top-first-view {
+    padding-top: 63px; } }
+
+.background {
+  background-image: url("../../images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .background .background-screen {
+    background-color: white;
+    animation: background-scree-animation 0.4s ease-out 1.5s 1 normal forwards; }
+    .background .background-screen .animation-panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70vh; }
+      .background .background-screen .animation-panel .animation-cavas .animation-cavas-inner .logo {
+        max-width: 100px;
+        margin: 0 auto; }
+        .background .background-screen .animation-panel .animation-cavas .animation-cavas-inner .logo .wrapper {
+          width: 0;
+          height: 79px;
+          overflow: hidden;
+          animation: logo-animation 0.2s ease 0.5s 1 normal forwards; }
+          .background .background-screen .animation-panel .animation-cavas .animation-cavas-inner .logo .wrapper img {
+            width: 100px !important; }
+      .background .background-screen .animation-panel .animation-cavas .animation-cavas-inner .title h1 {
+        text-align: center;
+        color: #00000000;
+        animation: text-animation 0.4s ease 1.1s 1 normal forwards; }
+        @media screen and (max-width: 700px) {
+          .background .background-screen .animation-panel .animation-cavas .animation-cavas-inner .title h1 {
+            font-size: 30px; } }
+      .background .background-screen .animation-panel .animation-cavas .animation-cavas-inner .line {
+        border-bottom: 2px solid #2d4486;
+        margin-left: 100%;
+        animation: line-animation 0.2s ease-out 0.9s 1 normal forwards; }
+      .background .background-screen .animation-panel .animation-cavas .animation-cavas-inner .sub-title h2 {
+        text-align: center;
+        color: #00000000;
+        animation: text-animation 0.4s ease 1.1s 1 normal forwards; }
+        @media screen and (max-width: 700px) {
+          .background .background-screen .animation-panel .animation-cavas .animation-cavas-inner .sub-title h2 {
+            font-size: 20px; } }
+        @media screen and (max-width: 375px) {
+          .background .background-screen .animation-panel .animation-cavas .animation-cavas-inner .sub-title h2 {
+            font-size: 16px; } }
+    .background .background-screen .info-panel {
+      background-color: #0000006e;
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px); }
+      .background .background-screen .info-panel .white {
+        color: white; }
+      .background .background-screen .info-panel .inner {
+        padding: 1em;
+        background-color: white;
+        animation: background-scree-animation 0.4s ease-out 1.5s 1 normal forwards; }
+        .background .background-screen .info-panel .inner div {
+          color: white; }
+        @media screen and (min-width: 701px) {
+          .background .background-screen .info-panel .inner .news-list, .background .background-screen .info-panel .inner .row {
+            display: flex; }
+          .background .background-screen .info-panel .inner .col {
+            padding: 0 0.5em; } }
+
+@keyframes logo-animation {
+  0% {
+    width: 0; }
+  100% {
+    width: 100px; } }
+@keyframes line-animation {
+  0% {
+    margin-left: 100%; }
+  100% {
+    margin-left: 0%; } }
+@keyframes text-animation {
+  0% {
+    color: #00000000; }
+  100% {
+    color: #2d4486; } }
+@keyframes background-scree-animation {
+  0% {
+    background-color: white; }
+  100% {
+    background-color: rgba(255, 255, 255, 0); } }
+
+/*# sourceMappingURL=topfv.css.map */

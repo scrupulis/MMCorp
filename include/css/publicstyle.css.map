@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,OAAO;EACH,OAAO,EAAG,CAAC;EACX,SAAS,EAAE,gBAAgB;EAC3B,UAAU,EAAE,OAAO",
+"sources": ["publicstyle.scss"],
+"names": [],
+"file": "publicstyle.css"
+}

@@ -1,0 +1,200 @@
+
+@import "../../../include/css/variables.scss";
+@import "../../../include/css/mixin.scss";
+
+// ファーストビューの背景設定
+#sublayer-background{
+    background-image: url('../images/csrfv.jpg');
+    background-position: center;
+    background-size:cover;
+
+    @include flex_template_1(center,center);
+    h1{
+        color:white;
+        text-shadow:0px 0px 5px rgba(0,0,0,0.76);
+    }
+}
+
+
+#MMRecruit{
+    // SP版のMMRecruit内は独自のフォントサイズを使用
+    @media screen and (max-width:$width_show_hamberger){
+        h1{
+            font-size: $font_size_h1_recruit;
+        }
+        h2{
+            font-size: $font_size_h2_recruit;
+        }
+        h3{
+            font-size: $font_size_h3_recruit;
+        }
+        // サブレイヤのテンプレートで設定されているパディングをリセット
+        p{
+            padding: 0;
+        }
+    }
+
+    .hr{
+        padding: $default_padding_recruit 0;
+        img{
+            width: 100%;
+        }
+    }
+
+    // 人事部
+    #topsection{
+        .section-hero{
+            
+            display: flex;
+            flex-direction: row;
+
+            .left-pane{
+                width: $width_topsection_hero_leftpane_recruit;
+                figure{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+
+            .right-pane{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 100%-$width_topsection_hero_leftpane_recruit; 
+
+                .image-wrapper{
+                    figure{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .text-wrapper{
+                    h2{
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    h2,p{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .subsection{
+            h3{
+                margin: $default_padding_recruit 0;
+                border-top: 1px solid $color_front;
+                border-bottom: 1px solid $color_front;
+            }
+        }
+
+    }
+
+    // 各個人の1日
+    .lower-section{
+        > .inner{
+            padding: $default_padding_recruit 0;
+            // タイトル
+            .heading{
+                h2{
+                    width: 100%;
+                    figure{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .subsection{
+                padding: $default_padding_recruit 0;
+            }
+
+            // コメント部分のサブセクション
+            .empyee-comment{
+                display: flex;
+                flex-direction: row;
+                .left-pane{
+                    width: $width_lowersectiom_emplyeecomment_leftpane_recruit;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .right-pane{
+                    width: 100% - $width_lowersectiom_emplyeecomment_leftpane_recruit;
+                }
+            }
+
+            .employee-profile{
+                .employee-info{
+                    
+                    h3{
+                        @include title-line($color_front);
+                    }
+                    .info-body{
+                        padding-bottom: $default_padding_recruit/2;
+                        border-bottom: 1px solid $color_front;
+                        .row{
+                            display: flex;
+                            flex-direction: row;
+                            .cell{
+                                display: flex;
+                                flex-direction: row;
+                                &:first-child{
+                                    padding-right: $default_padding_recruit;
+                                }
+                            }
+                        }
+                    }
+
+                    .day{
+                        padding-top: $default_padding_recruit;
+                        .swiper-container{
+                            .swiper-wrapper{
+                                .swiper-slide{
+                                    .inner{
+                                        display: flex;
+                                        flex-direction: column;
+                                        .image-wrapper{
+                                            width: 100%;
+                                            img
+                                            {
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Swiperの設定
+.swiper-container{
+    padding-bottom: 1.5em;
+}
+
+
+.swiper-button-next{
+    background-image: url("../images/arrow_right.svg") !important;
+}
+
+.swiper-button-prev{
+    background-image: url("../images/arrow_left.svg") !important;
+}
+.swiper-pagination-bullet-active{
+    background-color: $color_front !important;  
+}
+.swiper-button-next , .swiper-button-prev{
+    @include dropshadow( 0 ,0, 2px,$color_front );
+}

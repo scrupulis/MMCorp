@@ -1,0 +1,13 @@
+
+@import "../../../include/css/variables.scss";
+@import "../../../include/css/mixin.scss";
+
+// ファーストビューの背景設定
+#sublayer-background{
+    @include flex_template_1(center,center);
+    
+}
+
+ul{
+    padding-left: 1.5em;
+}

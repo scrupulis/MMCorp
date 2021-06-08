@@ -1,0 +1,44 @@
+
+@import "../../../include/css/variables.scss";
+
+
+.sublayer-top-section{
+
+    @media screen and (max-width:$width_show_hamberger){
+        padding-top: $height_sp_header;
+    }
+
+    #contents-root{
+        .first-view{
+            .background{
+                height: $height_firstview;
+                background-size: cover;
+                background-position: center;
+    
+                h1{
+                    padding: 0 .3em;
+                }
+    
+            }
+        }
+    }
+
+}
+
+
+.only-on-datis{
+    display: none;
+}
+
+.sublayer-unique-section
+{
+    max-width: $max_width_content;
+    margin: 0 auto;
+    padding:1em;
+    h1,h2{
+        text-align: center;
+    }
+    p{
+        padding-top: 1em;
+    }
+}

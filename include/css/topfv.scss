@@ -1,0 +1,163 @@
+
+@import "variables.scss";
+@import "mixin.scss";
+// ファーストビューの背景
+
+
+#top-first-view{
+    // スマホ版ではヘッダが固定されるので、その分上方に余白を取る
+    @media screen and (max-width:$width_show_hamberger) {
+        padding-top: $height_sp_header;
+    }
+}
+
+.background{
+    background-image: url("../../images/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .background-screen{
+        // 背景写真をアニメーション終了まで隠すためのボックス
+        
+        background-color: $color_background_screen_before;
+        animation: background-scree-animation $duration_background_screen_animation ease-out $delay_background_scree_animation 1 normal forwards;
+        
+        .animation-panel{
+            @include flex-centering;    // アニメーションするすべての要素をflexで上下左右センタリング
+            height:$height_firstview_animation_canvas;
+            .animation-cavas{
+                
+                .animation-cavas-inner{
+                    //　ロゴ画像
+                    .logo{
+                        max-width: $width_logo; // divが横幅いっぱいに伸びるのを防ぐ
+                        margin:0 auto;
+                        .wrapper{
+                            // ロゴ出現アニメーションをここにかけます
+                            width:0;    // アニメーションのために幅の初期値は0にしています。
+                            height:$height_logo;
+                            overflow: hidden;
+                            animation:logo-animation $duration_logo_animation ease $delay_logo_animation 1 normal forwards;
+                            img{
+                                @include override-width($width_logo);
+                            }
+                        }
+
+                    }
+                    // 知と希望に溢れた社会を作る。
+                    .title{
+                        h1{
+                            text-align: center;
+                            color: $color_invisible;
+                            animation: text-animation $duration_text_animation ease $delay_text_animation 1 normal forwards;
+
+                            @media screen and(max-width:$width_show_hamberger){
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                    // タイトルとサブタイトルとを水平に分割する線分
+                    .line{
+                        border-bottom: 2px solid  $color_main;
+                        margin-left: 100%;
+                        animation: line-animation  $duration_line_animation ease-out $delay_line_animation 1 normal forwards;
+                    }   
+                    // SMB特化型のサクセスプラットフォームを提供しています。
+                    .sub-title{
+                        h2{
+                            text-align: center;
+                            color:$color_invisible;
+                            animation: text-animation $duration_text_animation ease $delay_text_animation 1 normal forwards;
+
+                            @media screen and(max-width:$width_show_hamberger){
+                                font-size: 20px;
+                            }
+                            @media screen and(max-width:$width_4_7inch_iPhone){ 
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        // 新着情報
+        .info-panel{
+            background-color: #0000006e;
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            .white{
+                color: white;
+            }
+            .inner{
+
+                padding: 1em;
+                background-color: $color_background_screen_before;
+                animation: background-scree-animation $duration_background_screen_animation ease-out $delay_background_scree_animation 1 normal forwards;
+
+                div{
+                    color: white;
+                }   
+
+                @media screen and (min-width:$width_show_hamberger+1) {
+                    .news-list, .row {
+                        display: flex;
+                    }
+                    .col{
+                        padding:0 .5em
+                    }
+                }
+            }
+        }
+    
+
+    }
+
+
+    
+
+}
+
+
+// キーフレームアニメーション
+
+// ロゴの出現アニメーション
+@keyframes logo-animation{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: $width_logo; // defined in variables.scss
+    }
+}
+
+// タイトルとサブタイトルとを分割する線分の出現アニメーション
+@keyframes line-animation{
+    0%{
+        margin-left: 100%;
+    }
+    100%{
+        margin-left: 0%;
+    }
+}
+
+@keyframes text-animation{
+    0%{
+        color: $color_invisible;
+    }
+    100%{
+        color: $color_main;
+    }
+}
+
+// 背景の出現アニメーション
+@keyframes background-scree-animation{
+    0%{
+        background-color: $color_background_screen_before;
+    }
+    100%{
+        background-color: $color_background_screen_after;
+    }
+}
