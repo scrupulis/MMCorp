@@ -1,0 +1,55 @@
+//- 新型コロナに関するお知らせのページ
+
+
+//- 階層設定
+- var depth = '../../';
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="株式会社エム・マーケティング　公式ホームページ")
+
+        // CSSリンク
+        
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        link(href="#{depth}include/css/linkbutton.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")        
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/publicstyle.css" rel="stylesheet")
+        link(href="#{depth}sublayers/subinclude/css/sublayers.css" rel="stylesheet")
+        link(href="css/style.css" rel="stylesheet")
+        
+        // ファビコン設定
+        link(href="https://mmark.co.jp/media/publicresources/images/mmark_logo.svg" rel="icon" type="image/svg+xml")
+
+        title 新型コロナウイルス対策に伴う在宅勤務実施のお知らせ｜株式会社エム・マーケティング　公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+    
+    body
+
+        //- ヘッダ
+        include ../../include/jade/header.jade
+
+        main
+            - var section_name = "COVID"
+            - var section_title = "お知らせ"
+            include ../subinclude/jade/sublyaertemplates.jade
+
+            section#csr-main-section.sublayer-unique-section 
+                h2 新型コロナウイルス対策に伴う在宅勤務実施のお知らせ｜株式会社エム・マーケティング　公式ホームページ
+                p この度弊社では、新型コロナウィルスの感染拡大を防止し、
+                    | 関係者の皆様や弊社従業員の安全確保のため、
+                    | 2022年1月より、完全テレワーク（在宅勤務）対応を実施しております。
+                    | 皆様にはご不便・ご迷惑をおかけいたしますが、ご理解賜りますようお願い申し上げます。
+                    br
+                    | テレワーク対応に伴いまして、
+                    | お客様からのご質問やご相談は、
+                    | メールまたは弊社ホームページのお問い合わせフォームよりご入力をお願いしております。
+
+        //- フッター
+        include ../../include/jade/footer.jade
+        //- SATORI計測タグ
+        include ../../include/js/satori.js

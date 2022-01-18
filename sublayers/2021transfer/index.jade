@@ -1,0 +1,72 @@
+//- 新型コロナに関するお知らせのページ
+
+
+//- 階層設定
+- var depth = '../../';
+
+html(lang="ja")
+    head 
+        meta(charset = "utf-8")
+        meta(name="viewport" content = "width=device-width, initial-scale=1"  )
+        meta(description="株式会社エム・マーケティング　公式ホームページ")
+
+        // CSSリンク
+        
+        link(href="#{depth}include/css/reset.css" rel="stylesheet")
+        link(href="#{depth}include/css/header.css" rel="stylesheet")
+        link(href="#{depth}include/css/linkbutton.css" rel="stylesheet")
+        link(href="https://mmark.co.jp/media/publicresources/css/publicstyle.css" rel="stylesheet")        
+        link(href="#{depth}include/css/footer.css" rel="stylesheet")
+        link(href="#{depth}include/css/publicstyle.css" rel="stylesheet")
+        link(href="#{depth}sublayers/subinclude/css/sublayers.css" rel="stylesheet")
+        link(href="css/style.css" rel="stylesheet")
+        
+        // ファビコン設定
+        link(href="https://mmark.co.jp/media/publicresources/images/mmark_logo.svg" rel="icon" type="image/svg+xml")
+
+        title 新型コロナ感染症感染拡大に伴うお知らせ｜株式会社エム・マーケティング　公式ホームページ
+
+        script(src="#{depth}include/js/jquery3.4.1.min.js")
+    
+    body
+
+        //- ヘッダ
+        include ../../include/jade/header.jade
+
+        main
+            - var section_name = "TRANSFER"
+            - var section_title = "本社移転のお知らせ"
+            include ../subinclude/jade/sublyaertemplates.jade
+
+            section#csr-main-section.sublayer-unique-section 
+                //- h2 本社移転のお知らせ
+                p 時下ますますご清栄のこととお慶び申し上げます。
+                    | 平素は格別のご高配を賜り、厚く御礼申し上げます。
+                    br
+                    br
+                    | さて、このたび弊社では2021年7月13日より、
+                    br
+                    | 本社オフィスを下記住所に移転いたしましたのでご案内申し上げます。
+                    br
+                    br
+                    | 移転を機に、サービスのさらなる向上をめざし皆様のご期待に沿えるよう努力してまいりますので、
+                    | 今後とも変わらぬお引立てを賜りますようお願い申し上げます。
+                    br
+                    br
+                    br
+                    | 【移転先住所】
+                    br
+                    | 〒103-0005
+                    br
+                    | 東京都中央区日本橋久松町11番8号　REGRARD NINGYOCHO 4階
+                    br
+                    br
+                    | TEL：03-6804-5580
+                    br
+                    | FAX：03-6701-2480
+                    br
+                    br
+                    ※電話番号・FAX番号は変更ございません。
+
+        //- フッター
+        include ../../include/jade/footer.jade

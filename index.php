@@ -272,14 +272,6 @@ echo '<div class="col">新着情報はありません</div></div>';
                             <td>三井住友銀行<br/>みずほ銀行<br/>りそな銀行<br/>城南信用金庫<br/>さわやか信用金庫</td>
                           </tr>
                           <tr>
-                            <th>主要監査法人</th>
-                            <td>PwC京都監査法人</td>
-                          </tr>
-                          <tr>
-                            <th>従業員数</th>
-                            <td>54名（パート含む）</td>
-                          </tr>
-                          <tr>
                             <th>電話番号</th>
                             <td>03-6804-5580</td>
                           </tr>
@@ -312,7 +304,7 @@ echo '<div class="col">新着情報はありません</div></div>';
               </section>
               <section id="access">
                 <div class="section-head fadein">
-                  <h1>Acecess</h1>
+                  <h1>Access</h1>
                   <p class="subtiel">アクセス</p>
                 </div>
                 <div class="section-boyd fadein">
@@ -323,15 +315,15 @@ echo '<div class="col">新着情報はありません</div></div>';
                           <table class="default-table">
                             <tr>
                               <th>本社所在地</th>
-                              <td>〒102-0083<br/>東京都千代田区麹町3-2-9 麹町PREX5階</td>
+                              <td>〒103-0005<br/>東京都中央区日本橋久松町11番8号<br/>REGRARD NINGYOCHO 4階</td>
                             </tr>
                             <tr>
                               <th>交通</th>
-                              <td>■東京メトロ有楽町線「麹町駅」3番出口 徒歩1分<br/>■東京メトロ半蔵門線「半蔵門駅」6番出口 徒歩4分</td>
+                              <td>■都営地下鉄新宿線「馬喰横山駅」A3番出口 徒歩4分<br/>■都営地下鉄浅草線「東日本橋駅」徒歩4分</td>
                             </tr>
                           </table>
                         </div>
-                        <div class="map-wrapper"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.707154942809!2d139.73621331525885!3d35.684212080193575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d9a22bc55b1%3A0x3277cb162b44a9ef!2z5qCq5byP5Lya56S-44Ko44Og44O744Oe44O844Kx44OG44Kj44Oz44Kw!5e0!3m2!1sja!2sjp!4v1592474945979!5m2!1sja!2sjp" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+                        <div class="map-wrapper"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.6413275115433!2d139.78198322376926!3d35.689232000277535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188990817d6d6d%3A0x7d56852cf6305afe!2sREGRARD%20NINGYOCHO!5e0!3m2!1sja!2sjp!4v1626153221225!5m2!1sja!2sjp" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
                       </div>
                     </div>
                   </div>

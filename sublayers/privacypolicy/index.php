@@ -52,11 +52,11 @@
       </div>
     </header>
     <main>
-      <section id="privaypolicy" class="sublayer-top-section">
+      <section id="privacypolicy" class="sublayer-top-section">
         <div id="contents-root" class="inner">
           <div class="first-view">
             <div id="sublayer-background" class="background"><img src="images/sp-fv-front.svg" id="datis-fv-front" class="only-on-datis"/>
-              <h1 class="on-datis-hide">Privaypolicy</h1>
+              <h1 class="on-datis-hide">Privacypolicy</h1>
             </div>
           </div>
         </div>
@@ -156,7 +156,7 @@
                 <li>弊社は、前項（3）の保有個人データの訂正または削除の可否を決定した場合には、遅滞なく、当該お客様に通知します。</li>
                 <li>これらの請求を行いたい場合には、下記の通り対応させていただきます。
                   <ol> 
-                    <li>｢開示等の求め｣の申し出先下記宛、所定の申請書に必要書類・手数料を添付の上、レターパックプラスまたは簡易書留で郵送をお願い申し上げます。なお、封筒に朱書きで「開示等請求書類在中」とお書き添えいただければ幸いです。<br/>住所：<br/>〒住所:102-0083<br/>東京都千代田区麹町3-2-9 麴町PREX5階<br/>株式会社エム・マーケティング</li>
+                    <li>｢開示等の求め｣の申し出先下記宛、所定の申請書に必要書類・手数料を添付の上、レターパックプラスまたは簡易書留で郵送をお願い申し上げます。なお、封筒に朱書きで「開示等請求書類在中」とお書き添えいただければ幸いです。<br/>住所：<br/>〒住所:103-0005<br/>東京都中央区日本橋久松町11番8号<br/>REGRARD NINGYOCHO 4階<br/>株式会社エム・マーケティング</li>
                     <li>「開示等の求め」に際して提出すべき書面（様式）等「開示等の求め」を行う場合は、まず、Ｅメールにてご連絡ください。申請書をお送りいたします。申請書のご請求は、以下のメールアドレスまでご連絡ください。<br/>株式会社エム・マーケティング：support@mmark.net</li>
                     <li>代理人による「開示等の求め」｢開示等の求め｣をする者が代理人である場合は、下記の書類（A、B又はC）が必要となります。
                       <ol class="alphabet">
@@ -260,7 +260,7 @@
           </nav>
           <div class="info">
             <div class="copy-right">
-              <p class="footer-text">&copy; 2020 <a href="../../">株式会社エム・マーケティング </a></p>
+              <p class="footer-text">&copy; <?php echo Date('Y'); ?><a href="../../">株式会社エム・マーケティング </a></p>
             </div>
             <div class="legal-link"><a href="../../sublayers/privacypolicy" class="footer-text">プライバシーポリシー</a><a href="../../sublayers/tokusho" class="footer-text">特定商法取引法に基づく表示</a></div>
           </div>
